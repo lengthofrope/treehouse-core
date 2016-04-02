@@ -1,0 +1,24 @@
+{
+    "name": "lengthofrope/treehouse-core",
+    "description": "Treehouse is WordPress theme/plugin collection which houses a lot of functionality in plugins so users can easily switch a theme without losing access to things like custom-post-types.",
+    "homepage": "https://github.com/lengthofrope/treehouse-core",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Bas de Kort",
+            "email": "bdekort@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "phptal/phptal": ">=1.3"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "LengthOfRope\\TreeHouse\\": "src/"
+        }
+    }
+}
