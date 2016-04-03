@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "LengthOfRope\\TreeHouse\\": "src/"
+            "LengthOfRope\\TreeHouse\\": "lib/"
         }
     },
     "scripts": {

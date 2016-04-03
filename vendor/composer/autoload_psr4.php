@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'LengthOfRope\\TreeHouse\\' => array($baseDir . '/src'),
+    'LengthOfRope\\TreeHouse\\' => array($baseDir . '/lib'),
 );
