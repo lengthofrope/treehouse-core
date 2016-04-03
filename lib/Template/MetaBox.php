@@ -84,69 +84,104 @@ class MetaBox extends Template
      * This method is called on saving the post containing the MetaBox.
      *
      * @access private
-     * @param integer $post_id
+     * @param integer $postID
      */
-    public function savePostAction($post_id)
+    public function savePostAction($postID)
     {
         /*
          * We need to verify this came from the our screen and with proper authorization,
          * because save_post can be triggered at other times.
          */
 
-        // Check if our nonce is set.
-        $nonceCheck = strtolower($this->identifier) . '_metabox_nonce';
-        if (!isset($_POST[$nonceCheck])) {
-            return $post_id;
-        }
-
-        $nonce = $_POST[$nonceCheck];
-
-        // Verify that the nonce is valid.
-        if (!wp_verify_nonce($nonce, strtolower($this->identifier) . '_metabox')) {
-            return $post_id;
+        // Does the nonce validate?
+        if (!$this->nonceValidates()) {
+            return $postID;
         }
 
         // If this is an autosave, our form has not been submitted,
         // so we don't want to do anything.
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-            return $post_id;
+            return $postID;
         }
 
         // Check the user's permissions.
-        if ('page' == $_POST['post_type']) {
-            if (!current_user_can('edit_page', $post_id)) {
-                return $post_id;
-            }
-        } else {
-            if (!current_user_can('edit_post', $post_id)) {
-                return $post_id;
-            }
+        if (!$this->checkPermissions()) {
+            return $postID;
         }
 
         /* OK, its safe for us to save the data now. */
 
         // Sanitize the user input.
-        $data = isset($_POST[$this->identifier]) ? $_POST[$this->identifier] : false;
+        $data = filter_input(INPUT_POST, $this->identifier, FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
 
         if (is_array($data)) {
             $this->sanatizeArray($data);
 
             // Update the meta data for this box
-            update_post_meta($post_id, '_metabox' . $this->identifier, $data);
+            update_post_meta($postID, '_metabox' . $this->identifier, $data);
         }
     }
 
+    /**
+     * Check if the nonce for this metabox validates.
+     * 
+     * @return boolean
+     */
+    private function nonceValidates()
+    {
+        // Check if our nonce is set.
+        $nonceCheck = strtolower($this->identifier) . '_metabox_nonce';
+        $nonce = filter_input(INPUT_POST, $nonceCheck, FILTER_SANITIZE_STRING);
+        if (!isset($nonce)) {
+            return false;
+        }
+
+        // Verify that the nonce is valid.
+        if (!wp_verify_nonce($nonce, strtolower($this->identifier) . '_metabox')) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * Check if the current admin user is allowed to edit the metabox data.
+     * 
+     * @return boolean
+     */
+    private function checkPermissions()
+    {
+        $postType = filter_input(INPUT_POST, 'post_type', FILTER_SANITIZE_STRING);
+
+        if ($postType === 'page' && !current_user_can('edit_page', $postID)) {
+            return false;
+        } else if ($postType !== 'page' && !current_user_can('edit_post', $postID)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * Sanitize the array WordPress style
+     * 
+     * @param array $data
+     * @return array with sanatized strings
+     */
     private function sanatizeArray($data)
     {
-        if (is_array($data)) {
-            foreach ($data as &$value)
-            {
-                if (is_string($value)) {
-                    $value = sanitize_text_field($value);
-                }
-                if (is_array($value)) {
-                    $value = $this->sanatizeArray($value);
-                }
+        // Bail early if not an array
+        if (!is_array($data)) {
+            return $data;
+        }
+        
+        foreach ($data as &$value)
+        {
+            if (is_string($value)) {
+                $value = sanitize_text_field($value);
+            }
+            if (is_array($value)) {
+                $value = $this->sanatizeArray($value);
             }
         }
 
