@@ -47,15 +47,15 @@ class MetaBox extends Template
      * Called on action 'add_meta_boxes'.
      *
      * @access private
-     * @param string $post_type
+     * @param string $postType
      */
-    public function addMetaBoxAction($post_type)
+    public function addMetaBoxAction($postType)
     {
         // Only add the meta box if the correct post type
-        if (count($this->postTypes) === 0 || in_array($post_type, $this->postTypes)) {
+        if (count($this->postTypes) === 0 || in_array($postType, $this->postTypes)) {
             wp_enqueue_media();
             add_meta_box(
-                $this->identifier, $this->title, array($this, 'renderMetaBoxContent'), $post_type, $this->context, $this->priority
+                $this->identifier, $this->title, array($this, 'renderMetaBoxContent'), $postType, $this->context, $this->priority
             );
         }
     }
