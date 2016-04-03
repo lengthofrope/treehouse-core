@@ -8,7 +8,7 @@
   Author: LengthOfRope, Bas de Kort <bdekort@gmail.com>
   Author URI: https://github.com/lengthofrope
   License: MIT
-  Text Domain: treehouse-core
+  Text Domain: treehouse
  */
 
 // Set the folder of this plugin
