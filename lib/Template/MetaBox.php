@@ -14,7 +14,7 @@ class MetaBox extends Template
 {
 
     private $postTypes = array();
-    private $id;
+    private $identifier;
     private $context;
     private $priority;
     private $title;
@@ -22,19 +22,19 @@ class MetaBox extends Template
     /**
      * Metabox constructor
      * 
-     * @param string $id The unique ID for this metabox. Which is used for retrieving/ saving metadata.
+     * @param string $identifier The unique ID for this metabox. Which is used for retrieving/ saving metadata.
      * @param string $templateFile The template file.
      * @param string $title The title of the Meta Box (should be translated)
      * @param array $postTypes The post types to limit the meta box to, empty array for all post types
      * @param string $context The position of the meta box (default, side, advanced)
      * @param string $priority The priority of the metabox (low, default, high)
      */
-    public function __construct($id, $templateFile, $title, $postTypes = array(), $context = 'advanced', $priority = 'default')
+    public function __construct($identifier, $templateFile, $title, $postTypes = array(), $context = 'advanced', $priority = 'default')
     {
         parent::__construct($templateFile);
 
         $this->postTypes = $postTypes;
-        $this->id = $id;
+        $this->identifier = $identifier;
         $this->title = $title;
         $this->context = $context;
         $this->priority = $priority;
@@ -55,7 +55,7 @@ class MetaBox extends Template
         if (count($this->postTypes) === 0 || in_array($post_type, $this->postTypes)) {
             wp_enqueue_media();
             add_meta_box(
-                $this->id, $this->title, array($this, 'renderMetaBoxContent'), $post_type, $this->context, $this->priority
+                $this->identifier, $this->title, array($this, 'renderMetaBoxContent'), $post_type, $this->context, $this->priority
             );
         }
     }
@@ -69,10 +69,10 @@ class MetaBox extends Template
     public function renderMetaBoxContent($post)
     {
         // Add a nonce field so we can check for it later.
-        wp_nonce_field(strtolower($this->id) . '_metabox', strtolower($this->id) . '_metabox_nonce');
+        wp_nonce_field(strtolower($this->identifier) . '_metabox', strtolower($this->identifier) . '_metabox_nonce');
 
         // Get previously saved metadata for this box if any
-        $data = get_post_meta($post->ID, '_metabox' . $this->id, true);
+        $data = get_post_meta($post->ID, '_metabox' . $this->identifier, true);
 
         if (isset($data) && is_array($data)) {
             $this->setTalData($data);
@@ -94,7 +94,7 @@ class MetaBox extends Template
          */
 
         // Check if our nonce is set.
-        $nonceCheck = strtolower($this->id) . '_metabox_nonce';
+        $nonceCheck = strtolower($this->identifier) . '_metabox_nonce';
         if (!isset($_POST[$nonceCheck])) {
             return $post_id;
         }
@@ -102,7 +102,7 @@ class MetaBox extends Template
         $nonce = $_POST[$nonceCheck];
 
         // Verify that the nonce is valid.
-        if (!wp_verify_nonce($nonce, strtolower($this->id) . '_metabox')) {
+        if (!wp_verify_nonce($nonce, strtolower($this->identifier) . '_metabox')) {
             return $post_id;
         }
 
@@ -126,13 +126,13 @@ class MetaBox extends Template
         /* OK, its safe for us to save the data now. */
 
         // Sanitize the user input.
-        $data = isset($_POST[$this->id]) ? $_POST[$this->id] : false;
+        $data = isset($_POST[$this->identifier]) ? $_POST[$this->identifier] : false;
 
         if (is_array($data)) {
             $this->sanatizeArray($data);
 
             // Update the meta data for this box
-            update_post_meta($post_id, '_metabox' . $this->id, $data);
+            update_post_meta($post_id, '_metabox' . $this->identifier, $data);
         }
     }
 

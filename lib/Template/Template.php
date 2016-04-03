@@ -64,10 +64,12 @@ abstract class Template extends \PHPTAL
             {
                 $this->setTalData($key, $value);
             }
-        } else {
-            $this->set($talKey, $talValue);
+            
+            return $this;
         }
         
+        $this->set($talKey, $talValue);
+                
         return $this;
     }
 
