@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class LengthOfRope\Treehouse\Template\MetaBox | Treehouse CORE</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-LengthOfRope.html">
+						LengthOfRope<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-LengthOfRope.Treehouse.html">
+						Treehouse<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-LengthOfRope.Treehouse.Template.html">
+						Template<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-LengthOfRope.Treehouse.Template.Services.html">
+						Services					</a>
+
+						</li>
+							</ul></li></ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-LengthOfRope.Treehouse.Template.MetaBox.html">MetaBox</a></li>
+				<li><a href="class-LengthOfRope.Treehouse.Template.Template.html">Template</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-LengthOfRope.Treehouse.Template.html" title="Summary of LengthOfRope\Treehouse\Template"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class MetaBox</h1>
+
+
+	<div class="description">
+	<p>Create an admin MetaBox using TAL</p>
+
+<p>Note: form data is saved as metadata if the post name equals the id,
+so all data to be saved should have a input name like name='DemoBox[key]' if the id is DemoBox</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+PHPTAL
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-LengthOfRope.Treehouse.Template.Template.html"><span>LengthOfRope\Treehouse\Template\Template</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>LengthOfRope\Treehouse\Template\MetaBox</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-LengthOfRope.html">LengthOfRope</a>\<a href="namespace-LengthOfRope.Treehouse.html">Treehouse</a>\<a href="namespace-LengthOfRope.Treehouse.Template.html">Template</a><br>
+		
+
+				<b>Author:</b>
+				LengthOfRope, Bas de Kort <a href="&#109;a&#x69;&#108;&#x74;&#111;&#x3a;&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a><br>
+			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.Template.MetaBox.html#5-191" title="Go to source code">Template/MetaBox.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Template.MetaBox.html#22-44" title="Go to source code">__construct</a>( <span>string <var>$identifier</var></span>, <span>string <var>$templateFile</var></span>, <span>string <var>$title</var></span>, <span>array <var>$postTypes</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$context</var> = <span class="php-quote">'advanced'</span></span>, <span>string <var>$priority</var> = <span class="php-quote">'default'</span></span> )</code>
+
+		<div class="description short">
+			<p>Metabox constructor</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Metabox constructor</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$identifier</var></dt>
+					<dd>The unique ID for this metabox. Which is used for retrieving/ saving metadata.</dd>
+					<dt><var>$templateFile</var></dt>
+					<dd>The template file.</dd>
+					<dt><var>$title</var></dt>
+					<dd>The title of the Meta Box (should be translated)</dd>
+					<dt><var>$postTypes</var></dt>
+					<dd>The post types to limit the meta box to, empty array for all post types</dd>
+					<dt><var>$context</var></dt>
+					<dd>The position of the meta box (default, side, advanced)</dd>
+					<dt><var>$priority</var></dt>
+					<dd>The priority of the metabox (low, default, high)</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					Exception
+				</div>
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-LengthOfRope.Treehouse.Template.Template.html#___construct">LengthOfRope\Treehouse\Template\Template::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addMetaBoxAction" id="_addMetaBoxAction">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addMetaBoxAction">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Template.MetaBox.html#46-61" title="Go to source code">addMetaBoxAction</a>( <span>string <var>$postType</var></span> )</code>
+
+		<div class="description short">
+			<p>Called on action 'add_meta_boxes'.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Called on action 'add_meta_boxes'.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$postType</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="renderMetaBoxContent" id="_renderMetaBoxContent">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_renderMetaBoxContent">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Template.MetaBox.html#63-81" title="Go to source code">renderMetaBoxContent</a>( <span>object <var>$post</var></span> )</code>
+
+		<div class="description short">
+			<p>Render the actual meta box</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Render the actual meta box</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$post</var></dt>
+					<dd>The current post</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="savePostAction" id="_savePostAction">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_savePostAction">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Template.MetaBox.html#83-123" title="Go to source code">savePostAction</a>( <span>integer <var>$postID</var></span> )</code>
+
+		<div class="description short">
+			<p>This method is called on saving the post containing the MetaBox.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method is called on saving the post containing the MetaBox.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$postID</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-LengthOfRope.Treehouse.Template.Template.html#methods">LengthOfRope\Treehouse\Template\Template</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-LengthOfRope.Treehouse.Template.Template.html#_setTalData">setTalData()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Treehouse CORE API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

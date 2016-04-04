@@ -1,0 +1,7 @@
+# Source file or directory to parse
+source: ./lib/
+# Directory where to save the generated documentation
+destination: ./docs/
+
+# Title of generated documentation
+title: Treehouse CORE
