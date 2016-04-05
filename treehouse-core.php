@@ -25,6 +25,7 @@ if (!function_exists('add_action')) {
     exit;
 }
 
+
 // Check wordpress version
 if (isset($wp_version) && version_compare($wp_version, '4.4.0', '>=') && version_compare(PHP_VERSION, '5.3.0', '>=')) {
     // Load the autoloader
@@ -32,7 +33,7 @@ if (isset($wp_version) && version_compare($wp_version, '4.4.0', '>=') && version
 
     // Load our application
     if (class_exists('\LengthOfRope\Treehouse\Core')) {
-        \LengthOfRope\Treehouse\Core::getInstance();
+        new \LengthOfRope\Treehouse\Core();
     }
 } else {
     // Output a nag error on admin interface
