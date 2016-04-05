@@ -41,11 +41,11 @@ class PluginLoadPriority
         }
 
         // Get the basename
-        $f = preg_quote(basename(plugin_basename($this->pluginFile)));
+        $fileBaseName = preg_quote(basename(plugin_basename($this->pluginFile)));
 
         // Return an array with our plugin on top
         return array_merge(
-            preg_grep('/' . $f . '$/', $plugins), preg_grep('/' . $f . '$/', $plugins, PREG_GREP_INVERT)
+            preg_grep('/' . $fileBaseName . '$/', $plugins), preg_grep('/' . $fileBaseName . '$/', $plugins, PREG_GREP_INVERT)
         );
     }
 
@@ -63,15 +63,15 @@ class PluginLoadPriority
             return $plugins;
         }
 
-        $f = plugin_basename($this->pluginFile);
+        $fileBaseName = plugin_basename($this->pluginFile);
 
-        if (isset($plugins[$f])) {
+        if (isset($plugins[$fileBaseName])) {
             // Remove the plugin
-            unset($plugins[$f]);
+            unset($plugins[$fileBaseName]);
 
             // And add it before all others
             return array_merge(array(
-                $f => time(),
+                $fileBaseName => time(),
                 ), $plugins);
         } 
         
