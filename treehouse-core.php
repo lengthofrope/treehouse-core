@@ -27,17 +27,21 @@ if (!function_exists('add_action')) {
 
 
 // Check wordpress version
-if (isset($wp_version) && version_compare($wp_version, '4.4.0', '>=') && version_compare(PHP_VERSION, '5.3.0', '>=')) {
-    // Load the autoloader
-    require_once 'vendor/autoload.php';
-
-    // Load our application
-    if (class_exists('\LengthOfRope\Treehouse\Core')) {
-        new \LengthOfRope\Treehouse\Core();
-    }
-} else {
+if (isset($wp_version) && (version_compare($wp_version, '4.4.0', '<') || version_compare(PHP_VERSION, '5.3.0', '<'))) {
     // Output a nag error on admin interface
-    add_action('admin_notices', function() {
-        echo '<div class="error"><p>Treehouse is enabled but doesn\'t work since WP or PHP version requirements are not met. Treehouse <strong>requires</strong> at least <strong>WP 4.4.0</strong> and <strong>PHP 5.3.0</strong>.</p></div>';
+    add_action('admin_notices', function()
+    {
+        echo '<div class="error is-dismissable"><p>Treehouse is enabled but not working properly since WP or PHP version requirements are not met. Treehouse <strong>requires</strong> at least <strong>WP 4.4.0</strong> and <strong>PHP 5.3.0</strong>.</p></div>';
     });
+
+    // Make sure we do not continue
+    return;
+}
+
+// Load the autoloader
+require_once 'vendor/autoload.php';
+
+// Load our application
+if (class_exists('\LengthOfRope\Treehouse\Core')) {
+    new \LengthOfRope\Treehouse\Core();
 }
