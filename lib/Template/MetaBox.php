@@ -21,7 +21,7 @@ class MetaBox extends Template
 
     /**
      * Metabox constructor
-     * 
+     *
      * @param string $identifier The unique ID for this metabox. Which is used for retrieving/ saving metadata.
      * @param string $templateFile The template file.
      * @param string $title The title of the Meta Box (should be translated)
@@ -29,15 +29,16 @@ class MetaBox extends Template
      * @param string $context The position of the meta box (default, side, advanced)
      * @param string $priority The priority of the metabox (low, default, high)
      */
-    public function __construct($identifier, $templateFile, $title, $postTypes = array(), $context = 'advanced', $priority = 'default')
+    public function __construct($identifier, $templateFile, $title, $postTypes = array(), $context = 'advanced',
+        $priority = 'default')
     {
         parent::__construct($templateFile);
 
-        $this->postTypes = $postTypes;
+        $this->postTypes  = $postTypes;
         $this->identifier = $identifier;
-        $this->title = $title;
-        $this->context = $context;
-        $this->priority = $priority;
+        $this->title      = $title;
+        $this->context    = $context;
+        $this->priority   = $priority;
 
         add_action('add_meta_boxes', array($this, 'addMetaBoxAction'));
         add_action('save_post', array($this, 'savePostAction'));
@@ -55,7 +56,8 @@ class MetaBox extends Template
         if (count($this->postTypes) === 0 || in_array($postType, $this->postTypes)) {
             wp_enqueue_media();
             add_meta_box(
-                $this->identifier, $this->title, array($this, 'renderMetaBoxContent'), $postType, $this->context, $this->priority
+                $this->identifier, $this->title, array($this, 'renderMetaBoxContent'), $postType, $this->context,
+                $this->priority
             );
         }
     }
@@ -124,14 +126,14 @@ class MetaBox extends Template
 
     /**
      * Check if the nonce for this metabox validates.
-     * 
+     *
      * @return boolean
      */
     private function nonceValidates()
     {
         // Check if our nonce is set.
         $nonceCheck = strtolower($this->identifier) . '_metabox_nonce';
-        $nonce = filter_input(INPUT_POST, $nonceCheck, FILTER_SANITIZE_STRING);
+        $nonce      = filter_input(INPUT_POST, $nonceCheck, FILTER_SANITIZE_STRING);
         if (!isset($nonce)) {
             return false;
         }
@@ -146,7 +148,7 @@ class MetaBox extends Template
 
     /**
      * Check if the current admin user is allowed to edit the metabox data.
-     * 
+     *
      * @return boolean
      */
     private function checkPermissions()
@@ -164,7 +166,7 @@ class MetaBox extends Template
 
     /**
      * Sanitize the array WordPress style
-     * 
+     *
      * @param array $data
      * @return array with sanatized strings
      */
@@ -174,9 +176,8 @@ class MetaBox extends Template
         if (!is_array($data)) {
             return $data;
         }
-        
-        foreach ($data as &$value)
-        {
+
+        foreach ($data as &$value) {
             if (is_string($value)) {
                 $value = sanitize_text_field($value);
             }

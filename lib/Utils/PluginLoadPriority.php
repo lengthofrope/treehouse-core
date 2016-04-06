@@ -47,7 +47,8 @@ class PluginLoadPriority
 
         // Return an array with our plugin on top
         return array_merge(
-            preg_grep('/' . $fileBaseName . '$/', $plugins), preg_grep('/' . $fileBaseName . '$/', $plugins, PREG_GREP_INVERT)
+            preg_grep('/' . $fileBaseName . '$/', $plugins),
+            preg_grep('/' . $fileBaseName . '$/', $plugins, PREG_GREP_INVERT)
         );
     }
 
@@ -92,7 +93,7 @@ class PluginLoadPriority
             update_site_option('active_sitewide_plugins', get_site_option('active_sitewide_plugins'));
             return;
         }
-        
+
         update_option('active_plugins', get_option('active_plugins'));
     }
 

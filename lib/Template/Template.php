@@ -54,22 +54,21 @@ abstract class Template extends \PHPTAL
      *
      * @param string|array $talKey Key value or array of key-value pairs
      * @param string|NULL $talValue The value of the key, if key is not an array
-     * 
+     *
      * @return \NextBuzz\SEO\PHPTAL\Template to allow chaining
      */
     public function setTalData($talKey, $talValue = NULL)
     {
         if (is_array($talKey)) {
-            foreach ($talKey as $key => $value)
-            {
+            foreach ($talKey as $key => $value) {
                 $this->setTalData($key, $value);
             }
-            
+
             return $this;
         }
-        
+
         $this->set($talKey, $talValue);
-                
+
         return $this;
     }
 

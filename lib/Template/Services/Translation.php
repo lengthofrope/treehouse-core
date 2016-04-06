@@ -9,7 +9,8 @@ namespace LengthOfRope\Treehouse\Template\Services;
  */
 class Translation implements \PHPTAL_TranslationService
 {
-    private $domain = 'default';
+
+    private $domain   = 'default';
     private $encoding = 'UTF-8';
 
     public function setEncoding($encoding)
@@ -24,7 +25,8 @@ class Translation implements \PHPTAL_TranslationService
 
     public function setVar($key, $value)
     {
-        throw new \Exception(sprint_f("Use WordPress Translate Core to set var '%s' with value '%s'!", $key, $value), 500);
+        throw new \Exception(sprint_f("Use WordPress Translate Core to set var '%s' with value '%s'!", $key, $value),
+        500);
     }
 
     public function translate($key, $htmlescape = true)
@@ -32,7 +34,7 @@ class Translation implements \PHPTAL_TranslationService
         if ($htmlescape) {
             return esc_html(__($key, $this->domain));
         }
-        
+
         return __($key, $this->domain);
     }
 
@@ -40,4 +42,5 @@ class Translation implements \PHPTAL_TranslationService
     {
         $this->domain = $domain;
     }
+
 }

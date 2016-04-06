@@ -3,7 +3,7 @@
 /*
   Plugin Name: Treehouse CORE
   Plugin URI: https://github.com/lengthofrope/treehouse-core
-  Description: Treehouse is WordPress theme/plugin collection which houses a lot of functionality in plugins so users can easily switch a theme without losing access to things like custom-post-types. Requires PHP 5.3+ and WP 4.1+
+  Description: Houses a lot of functionality used by other Treehouse components.
   Version: 0.0.1
   Author: LengthOfRope, Bas de Kort <bdekort@gmail.com>
   Author URI: https://github.com/lengthofrope
@@ -29,9 +29,13 @@ if (!function_exists('add_action')) {
 // Check wordpress version
 if (isset($wp_version) && (version_compare($wp_version, '4.4.0', '<') || version_compare(PHP_VERSION, '5.3.0', '<'))) {
     // Output a nag error on admin interface
-    add_action('admin_notices', function()
+    add_action('admin_notices',
+        function()
     {
-        echo '<div class="error is-dismissable"><p>Treehouse is enabled but not working properly since WP or PHP version requirements are not met. Treehouse <strong>requires</strong> at least <strong>WP 4.4.0</strong> and <strong>PHP 5.3.0</strong>.</p></div>';
+        echo '<div class="error"><p>'
+        . 'Treehouse is enabled but not working properly since WP or PHP version requirements are not met. '
+        . 'Treehouse <strong>requires</strong> at least <strong>WP 4.4.0</strong> and <strong>PHP 5.3.0</strong>.'
+        . '</p></div>';
     });
 
     // Make sure we do not continue
