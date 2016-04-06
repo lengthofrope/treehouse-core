@@ -9,7 +9,10 @@ namespace LengthOfRope\Treehouse;
  */
 abstract class Component
 {
-    public function __construct() {
-        
+
+    public function __construct()
+    {
+
     }
+
 }
