@@ -26,7 +26,6 @@ class PluginLoadPriority
         add_filter('pre_update_option_active_plugins', array($this, 'filterActivePlugins'));
         add_filter('pre_update_site_option_active_sitewide_plugins', array($this, 'filterActiveSitewidePlugins'));
 
-
         register_activation_hook(TH_CORE_FILE, array($this, 'pluginActivation'));
     }
 
@@ -83,7 +82,7 @@ class PluginLoadPriority
 
     /**
      * This hook is run when the plugin is activated and required to force the plugin load order update.
-     * 
+     *
      * @param boolean $sitewide true on a multisite sitewide activation, false otherwise
      */
     public function pluginActivation($sitewide = false)
@@ -91,9 +90,10 @@ class PluginLoadPriority
         // Make sure we update the plugin load order on activation of this plugin
         if ($sitewide) {
             update_site_option('active_sitewide_plugins', get_site_option('active_sitewide_plugins'));
-        } else {
-            update_option('active_plugins', get_option('active_plugins'));
+            return;
         }
+        
+        update_option('active_plugins', get_option('active_plugins'));
     }
 
 }
