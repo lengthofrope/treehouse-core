@@ -57,7 +57,7 @@ abstract class Template extends \PHPTAL
      *
      * @return \NextBuzz\SEO\PHPTAL\Template to allow chaining
      */
-    public function setTalData($talKey, $talValue = NULL)
+    public function setTalData($talKey, $talValue = null)
     {
         if (is_array($talKey)) {
             foreach ($talKey as $key => $value) {
