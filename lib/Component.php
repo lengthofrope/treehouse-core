@@ -32,7 +32,8 @@ abstract class Component
      */
     public function loadTextDomain()
     {
-        load_plugin_textdomain('treehouse', false, basename(dirname($this->coreFile)) . '/languages');
+        $pluginBase = basename(dirname($this->coreFile));
+        load_plugin_textdomain($pluginBase, false, $pluginBase . '/languages');
     }
 
 }

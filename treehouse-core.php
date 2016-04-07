@@ -8,7 +8,7 @@
   Author: LengthOfRope, Bas de Kort <bdekort@gmail.com>
   Author URI: https://github.com/lengthofrope
   License: MIT
-  Text Domain: treehouse
+  Text Domain: treehouse-core
   Domain Path: /languages
  */
 

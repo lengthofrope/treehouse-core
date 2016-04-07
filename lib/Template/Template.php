@@ -21,14 +21,15 @@ abstract class Template extends \PHPTAL
     /**
      * Constructor
      * @param string $templateFile The XML file to use as template
+     * @param string $translationDomain The domain to use for translations
      * @throws \Exception
      */
-    public function __construct($templateFile)
+    public function __construct($templateFile, $translationDomain)
     {
         $this->templateFile = $templateFile;
 
         if (!is_readable($this->templateFile)) {
-            throw new \Exception(sprintf(__('File %s does not exist.', 'treehouse'), $this->templateFile), 404);
+            throw new \Exception(sprintf(__('File %s does not exist.', 'treehouse-core'), $this->templateFile), 404);
         }
 
         // Construct PHPTAL object
@@ -36,7 +37,7 @@ abstract class Template extends \PHPTAL
 
         // Add translator
         $this->TalTranslator = new Services\Translation();
-        $this->TalTranslator->useDomain('treehouse');
+        $this->TalTranslator->useDomain($translationDomain);
         $this->setTranslator($this->TalTranslator);
 
         // Render as HTML5
