@@ -11,6 +11,8 @@
   Text Domain: treehouse
  */
 
+defined( 'ABSPATH' ) or die();
+
 // Set the folder of this plugin
 if (!defined('TH_CORE_DIR')) {
     define('TH_CORE_VERSION', '0.0.1');
