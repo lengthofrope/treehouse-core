@@ -8,7 +8,7 @@ namespace LengthOfRope\Treehouse;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  */
-class Core extends Component
+class Core extends PluginComponent
 {
     public function __construct()
     {

@@ -10,7 +10,7 @@ namespace LengthOfRope\Treehouse;
 abstract class Component
 {
 
-    private $coreFile;
+    protected $coreFile;
 
     /**
      * Constructor which loads plugin core.
@@ -20,20 +20,6 @@ abstract class Component
     public function __construct($coreFile)
     {
         $this->coreFile = $coreFile;
-
-        // Load plugin/ theme text domain
-        add_action('plugins_loaded', array($this, 'loadTextDomain'));
-    }
-
-    /**
-     * Load the plugin's text-domain
-     *
-     * @access private
-     */
-    public function loadTextDomain()
-    {
-        $pluginBase = basename(dirname($this->coreFile));
-        load_plugin_textdomain($pluginBase, false, $pluginBase . '/languages');
     }
 
 }
