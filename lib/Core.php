@@ -15,6 +15,6 @@ class Core extends Component
         // Make sure Core is loaded before any other Treehouse plugin
         new Utils\PluginLoadPriority(TH_CORE_FILE);
 
-        parent::__construct();
+        parent::__construct(TH_CORE_FILE);
     }
 }

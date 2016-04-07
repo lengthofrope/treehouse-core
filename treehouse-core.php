@@ -9,6 +9,7 @@
   Author URI: https://github.com/lengthofrope
   License: MIT
   Text Domain: treehouse
+  Domain Path: /languages
  */
 
 defined('ABSPATH') or die();
