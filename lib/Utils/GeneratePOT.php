@@ -112,7 +112,7 @@ class GeneratePOT
             foreach ($files as $file) {
                 $content = file_get_contents($file);
                 if (in_array($ext, $this->useDom)) {
-                    $this->getTranslationsUsingDomDoc($content);
+                    $this->getTranslationsUsingDomDoc($file, $content);
                     continue;
                 }
 
@@ -125,7 +125,7 @@ class GeneratePOT
 
     /**
      * Use the regexp matches to find translations
-     * 
+     *
      * @param string $content
      */
     private function getTranslationsUsingRegExp($ext, $file, $content)
@@ -160,7 +160,7 @@ class GeneratePOT
      *
      * @param string $content
      */
-    private function getTranslationsUsingDomDoc($content)
+    private function getTranslationsUsingDomDoc($file, $content)
     {
         // Use DomDocument
         libxml_use_internal_errors(true);
@@ -197,7 +197,7 @@ class GeneratePOT
 
     /**
      * Recursive loop through all child nodes to retrieve all content
-     * 
+     *
      * @param \DOMElement $node
      */
     private function getNodeInnerData($node)
@@ -218,7 +218,7 @@ class GeneratePOT
 
     /**
      * Write an empty POT file containing all strings found
-     * 
+     *
      * @param string $file File to write to
      */
     public function writePot($file)
