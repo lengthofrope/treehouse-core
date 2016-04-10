@@ -43,7 +43,7 @@ abstract class Component
      */
     private function updatePOT()
     {
-        
+
     }
 
 }

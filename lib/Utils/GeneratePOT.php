@@ -71,7 +71,7 @@ class GeneratePOT
 
     /**
      * Keep track of which paths to remove from the comments.
-     * 
+     *
      * @param string $path
      * @return \LengthOfRope\Treehouse\Utils\GeneratePOT
      */
@@ -116,7 +116,7 @@ class GeneratePOT
                     continue;
                 }
 
-                $this->getTranslationsUsingRegExp($content);
+                $this->getTranslationsUsingRegExp($ext, $file, $content);
             }
         }
 
@@ -128,7 +128,7 @@ class GeneratePOT
      * 
      * @param string $content
      */
-    private function getTranslationsUsingRegExp($content)
+    private function getTranslationsUsingRegExp($ext, $file, $content)
     {
         // Use regular exppressions
         $contentLines = explode("\n", $content);
