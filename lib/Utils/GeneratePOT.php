@@ -37,7 +37,6 @@ class GeneratePOT
             '#_n_noop\(["|\'](.*?)["|\'], ["|\'](.*?)["|\'], ["|\'](.*?)["|\']\)#U' => array(1, 2), // _n_noop()
         )
     );
-    private $items = array();
     private $files = array(
         'xml' => array(),
         'php' => array()
@@ -109,72 +108,91 @@ class GeneratePOT
      */
     public function parse()
     {
-        $findings = array();
         foreach ($this->files as $ext => $files) {
             foreach ($files as $file) {
                 $content = file_get_contents($file);
                 if (in_array($ext, $this->useDom)) {
-                    // Use DomDocument
-                    libxml_use_internal_errors(true);
-                    $dom = new \DOMDocument();
-                    $dom->loadHTML($content);
-                    $xpath = new \DOMXPath($dom);
-                    $result = $xpath->query("//*[@*[local-name()='i18n:translate']]");
-                    $commentFile = str_replace($this->stripPathInComments, "", $file);
-                    foreach ($result as $node) {
-                        $translatable = $this->getNodeInnerData($node);
+                    $this->getTranslationsUsingDomDoc($content);
+                    continue;
+                }
+
+                $this->getTranslationsUsingRegExp($content);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * Use the regexp matches to find translations
+     * 
+     * @param string $content
+     */
+    private function getTranslationsUsingRegExp($content)
+    {
+        // Use regular exppressions
+        $contentLines = explode("\n", $content);
+        foreach ($this->lookFor[$ext] as $search => $matchIndexes) {
+            preg_match_all($search, $content, $matches);
+            if (isset($matches[0][0])) {
+                foreach ($matchIndexes as $index) {
+                    foreach ($matches[$index] as $translatable) {
                         if (!array_key_exists($translatable, $this->findings)) {
                             $this->findings[$translatable] = array();
                         }
 
-                        // Find linenumber
-                        $this->findings[$translatable][$node->getLineNo()] = $commentFile;
-                    }
-
-                    // Add i18n:attributes support
-                    $result2 = $xpath->query("//*[@*[local-name()='i18n:attributes']]");
-                    foreach ($result2 as $node2) {
-                        $translatableAttr = explode(";", $node2->getAttribute('i18n:attributes'));
-                        foreach ($translatableAttr as $attr) {
-                            $translatable = $node2->getAttribute(trim($attr));
-                            if (!array_key_exists($translatable, $this->findings)) {
-                                $this->findings[$translatable] = array();
-                            }
-
-                            // Find linenumber
-                            $this->findings[$translatable][$node2->getLineNo()] = $commentFile;
-                        }
-                    }
-
-                    continue;
-                }
-                // Use regular exppressions
-                $contentLines = explode("\n", $content);
-                foreach ($this->lookFor[$ext] as $search => $matchIndexes) {
-                    preg_match_all($search, $content, $matches);
-                    if (isset($matches[0][0])) {
-                        foreach ($matchIndexes as $index) {
-                            foreach ($matches[$index] as $translatable) {
-                                if (!array_key_exists($translatable, $this->findings)) {
-                                    $this->findings[$translatable] = array();
-                                }
-
-                                // Get linenumber
-                                $commentFile = str_replace($this->stripPathInComments, "", $file);
-                                $matchLines = preg_grep($search, $contentLines);
-                                foreach (array_keys($matchLines) as $lineNumber) {
-                                    if (substr_count($matchLines[$lineNumber], $translatable) > 0) {
-                                        $this->findings[$translatable][($lineNumber + 1)] = $commentFile;
-                                    }
-                                }
+                        // Get linenumber
+                        $commentFile = str_replace($this->stripPathInComments, "", $file);
+                        $matchLines = preg_grep($search, $contentLines);
+                        foreach (array_keys($matchLines) as $lineNumber) {
+                            if (substr_count($matchLines[$lineNumber], $translatable) > 0) {
+                                $this->findings[$translatable][($lineNumber + 1)] = $commentFile;
                             }
                         }
                     }
                 }
             }
         }
+    }
 
-        return $this;
+    /**
+     * Retrieve all TAL translations using DOMDocument.
+     *
+     * @param string $content
+     */
+    private function getTranslationsUsingDomDoc($content)
+    {
+        // Use DomDocument
+        libxml_use_internal_errors(true);
+        $dom = new \DOMDocument();
+        $dom->loadHTML($content);
+        $xpath = new \DOMXPath($dom);
+        $result = $xpath->query("//*[@*[local-name()='i18n:translate']]");
+        $commentFile = str_replace($this->stripPathInComments, "", $file);
+        foreach ($result as $node) {
+            $translatable = $this->getNodeInnerData($node);
+            if (!array_key_exists($translatable, $this->findings)) {
+                $this->findings[$translatable] = array();
+            }
+
+            // Find linenumber
+            $this->findings[$translatable][$node->getLineNo()] = $commentFile;
+        }
+
+        // Add i18n:attributes support
+        $result2 = $xpath->query("//*[@*[local-name()='i18n:attributes']]");
+        foreach ($result2 as $node2) {
+            $translatableAttr = explode(";", $node2->getAttribute('i18n:attributes'));
+            foreach ($translatableAttr as $attr) {
+                $translatable = $node2->getAttribute(trim($attr));
+                if (!array_key_exists($translatable, $this->findings)) {
+                    $this->findings[$translatable] = array();
+                }
+
+                // Find linenumber
+                $this->findings[$translatable][$node2->getLineNo()] = $commentFile;
+            }
+        }
     }
 
     /**
@@ -217,7 +235,7 @@ class GeneratePOT
             "\"Language-Team: LengthOfRope, Bas de Kort <bdekort@gmail.com>\\n\"" . PHP_EOL . PHP_EOL;
 
         require_once ABSPATH . '/wp-includes/pomo/po.php';
-        $Po = new \PO();
+        $poifyString = new \PO();
 
         foreach ($this->findings as $translatable => $locations) {
             $output .= "#:";
@@ -226,7 +244,7 @@ class GeneratePOT
             }
 
             $output .=
-                PHP_EOL . "msgid " . $Po->poify($translatable) .
+                PHP_EOL . "msgid " . $poifyString->poify($translatable) .
                 PHP_EOL . "msgstr \"\"" . PHP_EOL . PHP_EOL;
         }
 

@@ -34,10 +34,10 @@ abstract class Component
             // Bail early
             return;
         }
-        
+
         $this->updatePOT();
     }
-    
+
     /**
      * Update the POT file with all translations.
      */
