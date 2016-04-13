@@ -30,7 +30,7 @@ abstract class Component
      */
     private function initDevMode()
     {
-        if (defined('TREEHOUSE_DEV_MODE') && TREEHOUSE_DEV_MODE === true) {
+        if (!defined('TREEHOUSE_DEV_MODE') || TREEHOUSE_DEV_MODE === false) {
             // Bail early
             return;
         }
@@ -43,7 +43,27 @@ abstract class Component
      */
     private function updatePOT()
     {
+        $dir     = dirname($this->coreFile);
+        $base    = basename($dir);
+        $potFile = $dir . '/languages/' . $base . '.pot';
 
+        // If POT file exists, bail
+        if (file_exists($potFile)) {
+            return;
+        }
+
+        if (!is_dir(dirname($potFile))) {
+            mkdir(dirname($potFile), 0755, true);
+        }
+
+        // Create the POT file
+        $createPot = new Utils\GeneratePOT();
+        $createPot
+            ->addPath($dir . '/tpl/', "xml")
+            ->addPath($dir . '/lib/', "php")
+            ->stripPathInComments($dir)
+            ->parse()
+            ->writePot(ucwords(str_replace(array('-', '_'), ' ', $base)), $potFile);
     }
 
 }

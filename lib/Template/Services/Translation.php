@@ -32,10 +32,10 @@ class Translation implements \PHPTAL_TranslationService
     public function translate($key, $htmlescape = true)
     {
         if ($htmlescape) {
-            return esc_html(__($key, $this->domain));
+            return esc_html(__(\LengthOfRope\Treehouse\Utils\String::trimMultiline($key), $this->domain));
         }
 
-        return __($key, $this->domain);
+        return __(\LengthOfRope\Treehouse\Utils\String::trimMultiline($key), $this->domain);
     }
 
     public function useDomain($domain)

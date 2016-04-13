@@ -219,14 +219,15 @@ class GeneratePOT
     /**
      * Write an empty POT file containing all strings found
      *
+     * @param string $projectId The Id and Version string
      * @param string $file File to write to
      */
-    public function writePot($file)
+    public function writePot($projectId, $file)
     {
-        $output = "# Copyright (C) " . date("Y") . " NextBuzz" . PHP_EOL .
+        $output = "# Copyright (C) " . date("Y") . " LengthOfRope" . PHP_EOL .
             "msgid \"\"" . PHP_EOL .
             "msgstr \"\"" . PHP_EOL .
-            "\"Project-Id-Version: Treehouse NAME VERSION \\n\"" . PHP_EOL .
+            "\"Project-Id-Version: " . esc_html($projectId) . " \\n\"" . PHP_EOL .
             "\"POT-Creation-Date: " . date("Y-m-d H:i:sO") . "\\n\"" . PHP_EOL .
             "\"MIME-Version: 1.0\\n\"" . PHP_EOL .
             "\"Content-Type: text/plain; charset=UTF-8\\n\"" . PHP_EOL .
@@ -244,7 +245,7 @@ class GeneratePOT
             }
 
             $output .=
-                PHP_EOL . "msgid " . $poifyString->poify($translatable) .
+                PHP_EOL . "msgid " . $poifyString->poify(String::trimMultiline($translatable)) .
                 PHP_EOL . "msgstr \"\"" . PHP_EOL . PHP_EOL;
         }
 
