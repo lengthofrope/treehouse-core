@@ -245,7 +245,7 @@ class GeneratePOT
             }
 
             $output .=
-                PHP_EOL . "msgid " . $poifyString->poify(String::trimMultiline($translatable)) .
+                PHP_EOL . "msgid " . $poifyString->poify(String::factory($translatable)->trimMultiline()) .
                 PHP_EOL . "msgstr \"\"" . PHP_EOL . PHP_EOL;
         }
 
