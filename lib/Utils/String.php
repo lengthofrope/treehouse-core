@@ -21,6 +21,12 @@ class String
         $this->string = $string;
     }
 
+    /**
+     * A simple factory to allow chaining
+     *
+     * @param string $string The string to perform some things to
+     * @return \LengthOfRope\Treehouse\Utils\String
+     */
     public static function factory($string)
     {
         return new String($string);
