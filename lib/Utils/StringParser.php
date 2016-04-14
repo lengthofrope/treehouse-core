@@ -3,11 +3,11 @@
 namespace LengthOfRope\Treehouse\Utils;
 
 /**
- * This class provides some string utitlities.
+ * This class provides some string utilities.
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  */
-class String
+class StringParser
 {
     protected $string = "";
 
@@ -25,21 +25,43 @@ class String
      * A simple factory to allow chaining
      *
      * @param string $string The string to perform some things to
-     * @return \LengthOfRope\Treehouse\Utils\String
+     * @return \LengthOfRope\Treehouse\Utils\StringParser
      */
     public static function factory($string)
     {
-        return new String($string);
+        return new StringParser($string);
     }
 
     /**
      * This will trim each line in a multiline string.
      *
-     * @return string A multilined-trimmed string
+     * @return \LengthOfRope\Treehouse\Utils\StringParser
      */
     public function trimMultiline()
     {
-        return trim(implode("\n", array_map('trim', explode("\n", $this->string))));
+        $this->string = trim(implode("\n", array_map('trim', explode("\n", $this->string))));
+        
+        return $this;
+    }
+    
+    /**
+     * Return the parsed string
+     *
+     * @return string
+     */
+    public function get()
+    {
+        return $this->string;
+    }
+    
+    /**
+     * Return the parsed string
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->get();
     }
 
 }
