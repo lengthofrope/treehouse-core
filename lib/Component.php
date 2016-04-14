@@ -35,13 +35,15 @@ abstract class Component
             return;
         }
 
-        $this->updatePOT();
+        add_action('admin_init', array($this, 'updatePOT'));
     }
 
     /**
      * Update the POT file with all translations.
+     *
+     * @access private
      */
-    private function updatePOT()
+    public function updatePOT()
     {
         $dir     = dirname($this->coreFile);
         $base    = basename($dir);
@@ -64,6 +66,11 @@ abstract class Component
             ->stripPathInComments($dir)
             ->parse()
             ->writePot(ucwords(str_replace(array('-', '_'), ' ', $base)), $potFile);
+
+        // Output save message
+        new Template\AdminNotice(
+            sprintf(__("POT-file for component <strong>'%s'</strong> created.", "treehouse-core"), $base),
+            Template\AdminNotice::INFO);
     }
 
 }

@@ -30,8 +30,8 @@ abstract class PluginComponent extends Component
      */
     public function loadTextDomain()
     {
-        $pluginBase = basename(dirname($this->coreFile));
-        load_plugin_textdomain($pluginBase, false, $pluginBase . '/languages');
+        $pluginBase = plugin_basename(dirname($this->coreFile));
+        load_plugin_textdomain($pluginBase, false, $pluginBase . '/languages/');
     }
 
 }

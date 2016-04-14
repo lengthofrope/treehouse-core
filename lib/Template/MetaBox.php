@@ -25,14 +25,15 @@ class MetaBox extends Template
      * @param string $identifier The unique ID for this metabox. Which is used for retrieving/ saving metadata.
      * @param string $templateFile The template file.
      * @param string $title The title of the Meta Box (should be translated)
+     * @param string $translationDomain The domain to use for translations
      * @param array $postTypes The post types to limit the meta box to, empty array for all post types
      * @param string $context The position of the meta box (default, side, advanced)
      * @param string $priority The priority of the metabox (low, default, high)
      */
-    public function __construct($identifier, $templateFile, $title, $postTypes = array(), $context = 'advanced',
-        $priority = 'default')
+    public function __construct($identifier, $templateFile, $title, $translationDomain = "default",
+        $postTypes = array(), $context = 'advanced', $priority = 'default')
     {
-        parent::__construct($templateFile);
+        parent::__construct($templateFile, $translationDomain);
 
         $this->postTypes  = $postTypes;
         $this->identifier = $identifier;
