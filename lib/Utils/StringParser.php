@@ -9,6 +9,7 @@ namespace LengthOfRope\Treehouse\Utils;
  */
 class StringParser
 {
+
     protected $string = "";
 
     /**
@@ -40,10 +41,10 @@ class StringParser
     public function trimMultiline()
     {
         $this->string = trim(implode("\n", array_map('trim', explode("\n", $this->string))));
-        
+
         return $this;
     }
-    
+
     /**
      * Return the parsed string
      *
@@ -53,7 +54,7 @@ class StringParser
     {
         return $this->string;
     }
-    
+
     /**
      * Return the parsed string
      *
