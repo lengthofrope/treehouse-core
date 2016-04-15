@@ -18,21 +18,12 @@ class Core extends PluginComponent
 
         parent::__construct(TH_CORE_FILE);
 
-        // Test CPT
-        new CPT\Create('treehouse',
-            array('labels'      => array(
-                'name'          => __('Products'),
-                'singular_name' => __('Product')
-            ),
-            'public'      => true,
-            'has_archive' => true,
-        ));
-
-        /* CPT\Create::factory('products2')
-          ->setName(__('Products2'))
-          ->setNameSingular(__('Product2'))
-          ->setPublic(true)
-          ->setHasArchive(true); */
+        // Temporary test CPT
+        CPT\Create::factory('products')
+            ->setName(__('Products'))
+            ->setNameSingular(__('Product'))
+            ->setPublic(true)
+            ->setHasArchive(true);
     }
 
 }

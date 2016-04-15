@@ -59,7 +59,13 @@ class Create
             );
         }
 
-        $this->args = $args;
+        // Set some default values so we don't have to check for them in all set methods
+        $defaults = array(
+            'labels' => array(),
+            'supports' => array(),
+            'taxonomies' => array(),
+        );
+        $this->args = array_merge($defaults, $args);
 
         add_action('init', array($this, 'registerCPT'));
     }
@@ -92,21 +98,102 @@ class Create
      *
      * @param string $name
      * @return \LengthOfRope\Treehouse\CPT\Create
-     * @throws \Exception
+     * @throws \Exception If called to late
      */
     public function setName($name)
     {
-        if ($this->created) {
-            throw new \Exception(__("Doing it wrong! Creation of CPT has already happened!", "treehouse-core"), 500);
-        }
-
-        if (!isset($this->args['labels'])) {
-            $this->args['labels'] = array();
-        }
+        $this->checkCreated();
 
         $this->args['labels']['name'] = $name;
 
         return $this;
+    }
+
+    /**
+     * Set CPT label singular_name
+     *
+     * @param string $name
+     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @throws \Exception If called to late
+     */
+    public function setNameSingular($name)
+    {
+        $this->checkCreated();
+
+        $this->args['labels']['singular_name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Set CPT as public
+     *
+     * @param boolean $boolean
+     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @throws \Exception If called to late
+     */
+    public function setPublic($boolean)
+    {
+        $this->checkCreated();
+
+        $this->args['public'] = $boolean;
+
+        return $this;
+    }
+
+    /**
+     * Set CPT as archive
+     *
+     * @param boolean $boolean
+     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @throws \Exception If called to late
+     */
+    public function setHasArchive($boolean)
+    {
+        $this->checkCreated();
+
+        $this->args['has_archive'] = $boolean;
+
+        return $this;
+    }
+
+    /**
+     * Set CPT supports:
+     * - title
+     * - editor
+     * - author
+     * - thumbnail
+     * - excerpt
+     * - trackbacks
+     * - custom-fields
+     * - comments
+     * - revisions
+     * - page-attributes
+     * - post-formats
+     *
+     * @param array $supports Array of supported items
+     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @throws \Exception If called to late
+     */
+    public function setSupports($supports)
+    {
+        $this->checkCreated();
+
+        $this->args['supports'] = $supports;
+
+        return $this;
+    }
+
+    /**
+     * Throw an Exception if called to late in WordPress init process.
+     *
+     * @throws \Exception
+     */
+    private function checkCreated()
+    {
+        if ($this->created) {
+            throw new \Exception(__("Doing it wrong! Creation of CPT has already happened!", "treehouse-core"), 500);
+        }
     }
 
 }
