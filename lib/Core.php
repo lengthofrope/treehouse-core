@@ -23,7 +23,8 @@ class Core extends PluginComponent
             ->setName(__('Products'))
             ->setNameSingular(__('Product'))
             ->setPublic(true)
-            ->setHasArchive(true);
+            ->setHasArchive(true)
+            ->setSupports(array('title', 'thumbnail'));
     }
 
 }

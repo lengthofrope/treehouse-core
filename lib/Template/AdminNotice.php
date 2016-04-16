@@ -10,10 +10,10 @@ namespace LengthOfRope\Treehouse\Template;
 class AdminNotice extends Template
 {
 
-    const SUCCES  = "notice-success";
-    const INFO    = "notice-info";
+    const SUCCES = "notice-success";
+    const INFO = "notice-info";
     const WARNING = "notice-warning";
-    const ERROR   = "notice-error";
+    const ERROR = "notice-error";
 
     /**
      * Construct an Admin notification message.
@@ -27,21 +27,22 @@ class AdminNotice extends Template
         parent::__construct(TH_CORE_DIR . '/tpl/AdminNotice.xml', 'treehouse-core');
 
         $this->setTalData(array(
-            'class'   => 'notice ' . $type . ($dismissable ? ' is-dismissible' : ''),
+            'class' => 'notice ' . $type . ($dismissable ? ' is-dismissible' : ''),
             'message' => $message
         ));
 
-        // Execute the template when needed by
-        add_action('admin_notices', array($this, 'addAdminNotice'));
+        // Execute the template when needed by (requires PHP 5.4 but allows calling private method)
+        add_action('admin_notices', function() {
+            $this->addAdminNotice();
+        });
     }
 
     /**
      * Called on action 'admin_notices'.
      *
-     * @access private
      * @param string $postType
      */
-    public function addAdminNotice()
+    private function addAdminNotice()
     {
         $this->echoExecute();
     }

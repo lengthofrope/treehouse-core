@@ -35,30 +35,35 @@ class MetaBox extends Template
     {
         parent::__construct($templateFile, $translationDomain);
 
-        $this->postTypes  = $postTypes;
+        $this->postTypes = $postTypes;
         $this->identifier = $identifier;
-        $this->title      = $title;
-        $this->context    = $context;
-        $this->priority   = $priority;
+        $this->title = $title;
+        $this->context = $context;
+        $this->priority = $priority;
 
-        add_action('add_meta_boxes', array($this, 'addMetaBoxAction'));
-        add_action('save_post', array($this, 'savePostAction'));
+        add_action('add_meta_boxes', function($postType) {
+            $this->addMetaBoxAction($postType);
+        });
+        add_action('save_post', function($postID) {
+            $this->savePostAction($postID);
+        });
     }
 
     /**
      * Called on action 'add_meta_boxes'.
      *
-     * @access private
      * @param string $postType
      */
-    public function addMetaBoxAction($postType)
+    private function addMetaBoxAction($postType)
     {
         // Only add the meta box if the correct post type
         if (count($this->postTypes) === 0 || in_array($postType, $this->postTypes)) {
             wp_enqueue_media();
             add_meta_box(
-                $this->identifier, $this->title, array($this, 'renderMetaBoxContent'), $postType, $this->context,
-                $this->priority
+                $this->identifier, $this->title,
+                function($post) {
+                $this->renderMetaBoxContent($post);
+            }, $postType, $this->context, $this->priority
             );
         }
     }
@@ -66,10 +71,9 @@ class MetaBox extends Template
     /**
      * Render the actual meta box
      *
-     * @access private
      * @param object $post The current post
      */
-    public function renderMetaBoxContent($post)
+    private function renderMetaBoxContent($post)
     {
         // Add a nonce field so we can check for it later.
         wp_nonce_field(strtolower($this->identifier) . '_metabox', strtolower($this->identifier) . '_metabox_nonce');
@@ -89,7 +93,7 @@ class MetaBox extends Template
      * @access private
      * @param integer $postID
      */
-    public function savePostAction($postID)
+    private function savePostAction($postID)
     {
         /*
          * We need to verify this came from the our screen and with proper authorization,
@@ -134,7 +138,7 @@ class MetaBox extends Template
     {
         // Check if our nonce is set.
         $nonceCheck = strtolower($this->identifier) . '_metabox_nonce';
-        $nonce      = filter_input(INPUT_POST, $nonceCheck, FILTER_SANITIZE_STRING);
+        $nonce = filter_input(INPUT_POST, $nonceCheck, FILTER_SANITIZE_STRING);
         if (!isset($nonce)) {
             return false;
         }

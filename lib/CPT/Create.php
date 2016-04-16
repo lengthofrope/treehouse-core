@@ -67,15 +67,16 @@ class Create
         );
         $this->args = array_merge($defaults, $args);
 
-        add_action('init', array($this, 'registerCPT'));
+        add_action('init', function() {
+            $this->registerCPT();
+        });
     }
 
     /**
-     * Register the actual post type
+     * Callback tgat registers the actual post type
      *
-     * @access private
      */
-    public function registerCPT()
+    private function registerCPT()
     {
         $this->created = true;
         register_post_type($this->slug, $this->args);

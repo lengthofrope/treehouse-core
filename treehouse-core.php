@@ -30,13 +30,13 @@ if (!function_exists('add_action')) {
 
 
 // Check wordpress version
-if (isset($wp_version) && (version_compare($wp_version, '4.4.0', '<') || version_compare(PHP_VERSION, '5.3.0', '<'))) {
+if (isset($wp_version) && (version_compare($wp_version, '4.4.0', '<') || version_compare(PHP_VERSION, '5.4.0', '<'))) {
     // Output a nag error on admin interface
     add_action('admin_notices', function()
     {
         echo '<div class="error"><p>';
         echo 'Treehouse is enabled but not working properly since WP or PHP version requirements are not met. ';
-        echo 'Treehouse <strong>requires</strong> at least <strong>WP 4.4.0</strong> and <strong>PHP 5.3.0</strong>.';
+        echo 'Treehouse <strong>requires</strong> at least <strong>WP 4.4.0</strong> and <strong>PHP 5.4.0</strong>.';
         echo '</p></div>';
     });
 
