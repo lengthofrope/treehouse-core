@@ -204,7 +204,10 @@ class Create
      *       'true'  - site/?s=search-term will not include posts of this post type.
      *       'false' - site/?s=search-term will include posts of this post type.
      *
-     * Note: If you want to show the posts's list that are associated to taxonomy's terms, you must set exclude_from_search to false (ie : for call site_domaine/?taxonomy_slug=term_slug or site_domaine/taxonomy_slug/term_slug). If you set to true, on the taxonomy page (ex: taxonomy.php) WordPress will not find your posts and/or pagination will make 404 error...
+     * Note: If you want to show the posts's list that are associated to taxonomy's terms, you must set
+     * exclude_from_search to false (ie : for call site_domaine/?taxonomy_slug=term_slug or
+     * site_domaine/taxonomy_slug/term_slug). If you set to true, on the taxonomy page (ex: taxonomy.php) WordPress
+     * will not find your posts and/or pagination will make 404 error...
      *
      * @param boolean $boolean True or false
      * @return \LengthOfRope\Treehouse\CPT\Create
@@ -557,7 +560,7 @@ class Create
      * WordPress removes any query var not included in that array.
      *
      * If set to true it allows you to request a custom posts type (book) using this: example.com/?book=life-of-pi
-     * If set to a string rather than true (for example ‘publication’), you can do: example.com/?publication=life-of-pi
+     * If set to a string rather than true (for example ‘publication’), do: example.com/?publication=life-of-pi
      *
      * @param boolean|string $value True or false or string
      * @return \LengthOfRope\Treehouse\CPT\Create
