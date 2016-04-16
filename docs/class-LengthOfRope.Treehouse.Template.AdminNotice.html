@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class LengthOfRope\Treehouse\Template\MetaBox | Treehouse CORE</title>
+	<title>Class LengthOfRope\Treehouse\Template\AdminNotice | Treehouse CORE</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -62,8 +62,8 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-LengthOfRope.Treehouse.Template.AdminNotice.html">AdminNotice</a></li>
-				<li class="active"><a href="class-LengthOfRope.Treehouse.Template.MetaBox.html">MetaBox</a></li>
+				<li class="active"><a href="class-LengthOfRope.Treehouse.Template.AdminNotice.html">AdminNotice</a></li>
+				<li><a href="class-LengthOfRope.Treehouse.Template.MetaBox.html">MetaBox</a></li>
 				<li><a href="class-LengthOfRope.Treehouse.Template.Template.html">Template</a></li>
 			</ul>
 
@@ -103,14 +103,11 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class MetaBox</h1>
+	<h1>Class AdminNotice</h1>
 
 
 	<div class="description">
-	<p>Create an admin MetaBox using TAL</p>
-
-<p>Note: form data is saved as metadata if the post name equals the id,
-so all data to be saved should have a input name like name='DemoBox[key]' if the id is DemoBox</p>
+	<p>Create an admin notice using TAL</p>
 	</div>
 
 	<dl class="tree">
@@ -128,7 +125,7 @@ PHPTAL
 		</dd>
 		<dd style="padding-left:60px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>LengthOfRope\Treehouse\Template\MetaBox</span></b>			
+<b><span>LengthOfRope\Treehouse\Template\AdminNotice</span></b>			
 			
 			
 		</dd>
@@ -149,7 +146,7 @@ PHPTAL
 
 				<b>Author:</b>
 				LengthOfRope, Bas de Kort <a href="&#109;a&#x69;&#108;&#x74;&#111;&#x3a;&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a><br>
-			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.Template.MetaBox.html#5-196" title="Go to source code">Template/MetaBox.php</a>
+			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.Template.AdminNotice.html#5-50" title="Go to source code">Template/AdminNotice.php</a>
 		<br>
 	</div>
 
@@ -169,32 +166,24 @@ PHPTAL
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Template.MetaBox.html#22-50" title="Go to source code">__construct</a>( <span>string <var>$identifier</var></span>, <span>string <var>$templateFile</var></span>, <span>string <var>$title</var></span>, <span>string <var>$translationDomain</var> = <span class="php-quote">&quot;default&quot;</span></span>, <span>array <var>$postTypes</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$context</var> = <span class="php-quote">'advanced'</span></span>, <span>string <var>$priority</var> = <span class="php-quote">'default'</span></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Template.AdminNotice.html#18-38" title="Go to source code">__construct</a>( <span>string <var>$message</var></span>, <span>string <var>$type</var> = <code><a href="class-LengthOfRope.Treehouse.Template.AdminNotice.html#SUCCES">LengthOfRope\Treehouse\Template\AdminNotice::<b>SUCCES</b></a></code></span>, <span>boolean <var>$dismissable</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
-			<p>Metabox constructor</p>
+			<p>Construct an Admin notification message.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Metabox constructor</p>
+			<p>Construct an Admin notification message.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$identifier</var></dt>
-					<dd>The unique ID for this metabox. Which is used for retrieving/ saving metadata.</dd>
-					<dt><var>$templateFile</var></dt>
-					<dd>The template file.</dd>
-					<dt><var>$title</var></dt>
-					<dd>The title of the Meta Box (should be translated)</dd>
-					<dt><var>$translationDomain</var></dt>
-					<dd>The domain to use for translations</dd>
-					<dt><var>$postTypes</var></dt>
-					<dd>The post types to limit the meta box to, empty array for all post types</dd>
-					<dt><var>$context</var></dt>
-					<dd>The position of the meta box (default, side, advanced)</dd>
-					<dt><var>$priority</var></dt>
-					<dd>The priority of the metabox (low, default, high)</dd>
+					<dt><var>$message</var></dt>
+					<dd>The message to display to the user in the admin panel.</dd>
+					<dt><var>$type</var></dt>
+					<dd>The type of notice to display. Use one of the defined constants SUCCES, INFO, WARNING, ERROR</dd>
+					<dt><var>$dismissable</var></dt>
+					<dd>Set to true if the message is dismissable.</dd>
 				</dl></div>
 
 
@@ -227,6 +216,105 @@ PHPTAL
 
 
 
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="SUCCES" id="SUCCES">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-LengthOfRope.Treehouse.Template.AdminNotice.html#13" title="Go to source code"><b>SUCCES</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#SUCCES" class="anchor">#</a>
+				<code><span class="php-quote">&quot;notice-success&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="INFO" id="INFO">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-LengthOfRope.Treehouse.Template.AdminNotice.html#14" title="Go to source code"><b>INFO</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#INFO" class="anchor">#</a>
+				<code><span class="php-quote">&quot;notice-info&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="WARNING" id="WARNING">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-LengthOfRope.Treehouse.Template.AdminNotice.html#15" title="Go to source code"><b>WARNING</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#WARNING" class="anchor">#</a>
+				<code><span class="php-quote">&quot;notice-warning&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ERROR" id="ERROR">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-LengthOfRope.Treehouse.Template.AdminNotice.html#16" title="Go to source code"><b>ERROR</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ERROR" class="anchor">#</a>
+				<code><span class="php-quote">&quot;notice-error&quot;</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
 
 
 

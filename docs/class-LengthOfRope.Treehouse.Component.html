@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class LengthOfRope\Treehouse\Template\Template | Treehouse CORE</title>
+	<title>Class LengthOfRope\Treehouse\Component | Treehouse CORE</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -35,7 +35,7 @@
 						CPT					</a>
 
 						</li>
-				<li class="active">
+				<li>
 					<a href="namespace-LengthOfRope.Treehouse.Template.html">
 						Template<span></span>
 					</a>
@@ -62,9 +62,10 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-LengthOfRope.Treehouse.Template.AdminNotice.html">AdminNotice</a></li>
-				<li><a href="class-LengthOfRope.Treehouse.Template.MetaBox.html">MetaBox</a></li>
-				<li class="active"><a href="class-LengthOfRope.Treehouse.Template.Template.html">Template</a></li>
+				<li class="active"><a href="class-LengthOfRope.Treehouse.Component.html">Component</a></li>
+				<li><a href="class-LengthOfRope.Treehouse.Core.html">Core</a></li>
+				<li><a href="class-LengthOfRope.Treehouse.PluginComponent.html">PluginComponent</a></li>
+				<li><a href="class-LengthOfRope.Treehouse.ThemeComponent.html">ThemeComponent</a></li>
 			</ul>
 
 
@@ -91,7 +92,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="namespace-LengthOfRope.Treehouse.Template.html" title="Summary of LengthOfRope\Treehouse\Template"><span>Namespace</span></a>
+				<a href="namespace-LengthOfRope.Treehouse.html" title="Summary of LengthOfRope\Treehouse"><span>Namespace</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -103,35 +104,25 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class Template</h1>
+	<h1>Class Component</h1>
 
 
 	<div class="description">
-	<p>This is an abstract Template which is used as the base for all template files.
-It handles the reading and parsing of the xml files through PHPTAL.</p>
+	<p>The base class all plugin and themes should extend to.</p>
 	</div>
 
-	<dl class="tree">
-		<dd style="padding-left:0px">
-PHPTAL
-			
-			
-		</dd>
-		<dd style="padding-left:30px">
-			<img src="resources/inherit.png" alt="Extended by">
-<b><span>LengthOfRope\Treehouse\Template\Template</span></b>			
-			
-			
-		</dd>
-	</dl>
 
 
 	<div>
 		<h4>Direct known subclasses</h4>
-			<a href="class-LengthOfRope.Treehouse.Template.AdminNotice.html">LengthOfRope\Treehouse\Template\AdminNotice</a>, 
-			<a href="class-LengthOfRope.Treehouse.Template.MetaBox.html">LengthOfRope\Treehouse\Template\MetaBox</a>
+			<a href="class-LengthOfRope.Treehouse.PluginComponent.html">LengthOfRope\Treehouse\PluginComponent</a>, 
+			<a href="class-LengthOfRope.Treehouse.ThemeComponent.html">LengthOfRope\Treehouse\ThemeComponent</a>
 	</div>
 
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-LengthOfRope.Treehouse.Core.html">LengthOfRope\Treehouse\Core</a>
+	</div>
 
 
 
@@ -140,12 +131,12 @@ PHPTAL
 	<div class="info">
 		<b>Abstract</b><br>
 		
-		<b>Namespace:</b> <a href="namespace-LengthOfRope.html">LengthOfRope</a>\<a href="namespace-LengthOfRope.Treehouse.html">Treehouse</a>\<a href="namespace-LengthOfRope.Treehouse.Template.html">Template</a><br>
+		<b>Namespace:</b> <a href="namespace-LengthOfRope.html">LengthOfRope</a>\<a href="namespace-LengthOfRope.Treehouse.html">Treehouse</a><br>
 		
 
 				<b>Author:</b>
 				LengthOfRope, Bas de Kort <a href="&#109;a&#x69;&#108;&#x74;&#111;&#x3a;&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a><br>
-			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.Template.Template.html#5-76" title="Go to source code">Template/Template.php</a>
+			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.Component.html#5-76" title="Go to source code">Component.php</a>
 		<br>
 	</div>
 
@@ -165,69 +156,52 @@ PHPTAL
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Template.Template.html#21-51" title="Go to source code">__construct</a>( <span>string <var>$templateFile</var></span>, <span>string <var>$translationDomain</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Component.html#15-26" title="Go to source code">__construct</a>( <span>string <var>$coreFile</var></span> )</code>
 
 		<div class="description short">
-			<p>Constructor</p>
+			<p>Constructor which loads plugin core.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Constructor</p>
+			<p>Constructor which loads plugin core.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$templateFile</var></dt>
-					<dd>The XML file to use as template</dd>
-					<dt><var>$translationDomain</var></dt>
-					<dd>The domain to use for translations</dd>
+					<dt><var>$coreFile</var></dt>
+					<dd>The <strong>FILE</strong> variable of the plugin/ theme location</dd>
 				</dl></div>
 
 
-				<h4>Throws</h4>
-				<div class="list">
-					Exception
-				</div>
 
 
 
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="setTalData" id="_setTalData">
+	<tr data-order="updatePOT" id="_updatePOT">
 
 		<td class="attributes"><code>
 			 public 
 
-			NextBuzz\SEO\PHPTAL\Template
+			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_setTalData">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Template.Template.html#53-74" title="Go to source code">setTalData</a>( <span>string|array <var>$talKey</var></span>, <span>string|null <var>$talValue</var> = <span class="php-keyword1">null</span></span> )</code>
+		<a class="anchor" href="#_updatePOT">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Component.html#41-74" title="Go to source code">updatePOT</a>( )</code>
 
 		<div class="description short">
-			<p>Set TAL data to the template</p>
+			<p>Update the POT file with all translations.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>Set TAL data to the template</p>
+			<p>Update the POT file with all translations.</p>
 
 
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$talKey</var></dt>
-					<dd>Key value or array of key-value pairs</dd>
-					<dt><var>$talValue</var></dt>
-					<dd>The value of the key, if key is not an array</dd>
-				</dl></div>
 
-				<h4>Returns</h4>
-				<div class="list">
-					NextBuzz\SEO\PHPTAL\Template<br>to allow chaining
-				</div>
 
 
 
@@ -248,6 +222,34 @@ PHPTAL
 
 
 
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="coreFile" id="$coreFile">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LengthOfRope.Treehouse.Component.html#13" title="Go to source code"><var>$coreFile</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$coreFile" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
 
 
 

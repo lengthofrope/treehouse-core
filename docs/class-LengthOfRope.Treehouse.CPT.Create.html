@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class LengthOfRope\Treehouse\CPT\Create | Treehouse CORE</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-LengthOfRope.html">
+						LengthOfRope<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-LengthOfRope.Treehouse.html">
+						Treehouse<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-LengthOfRope.Treehouse.CPT.html">
+						CPT					</a>
+
+						</li>
+				<li>
+					<a href="namespace-LengthOfRope.Treehouse.Template.html">
+						Template<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-LengthOfRope.Treehouse.Template.Services.html">
+						Services					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-LengthOfRope.Treehouse.Utils.html">
+						Utils					</a>
+
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-LengthOfRope.Treehouse.CPT.Create.html">Create</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-LengthOfRope.Treehouse.CPT.html" title="Summary of LengthOfRope\Treehouse\CPT"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Create</h1>
+
+
+	<div class="description">
+	<p>A helper class to create Custom Post Types.</p>
+
+<p>It handles:
+- Creation of the post type (with a prefix by default)
+- Adding templates within the plugin for singles and archives.
+- Allows basic settings to be set through chaining</p>
+
+<p>Usage (ordinary mode):</p>
+
+<pre><span class="php-keyword1">new</span> \LengthOfRope\Treehouse\CPT\Create(<span class="php-quote">'products'</span>, <span class="php-keyword1">array</span>(
+     <span class="php-quote">'labels'</span>      =&gt; <span class="php-keyword1">array</span>(
+         <span class="php-quote">'name'</span>          =&gt; __(<span class="php-quote">'Products'</span>),
+         <span class="php-quote">'singular_name'</span> =&gt; __(<span class="php-quote">'Product'</span>)
+     ),
+     <span class="php-quote">'public'</span>      =&gt; <span class="php-keyword1">true</span>,
+     <span class="php-quote">'has_archive'</span> =&gt; <span class="php-keyword1">true</span>,
+ ));</pre>
+
+<p>Usage (chained mode):</p>
+
+<pre>\LengthOfRope\Treehouse\CPT\Create::factory(<span class="php-quote">'products'</span>)
+     -&gt;setLabels(__(<span class="php-quote">'Products'</span>), __(<span class="php-quote">'Product'</span>))
+     -&gt;setPublic(<span class="php-keyword1">true</span>)
+     -&gt;setHasArchive(<span class="php-keyword1">true</span>);</pre>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-LengthOfRope.html">LengthOfRope</a>\<a href="namespace-LengthOfRope.Treehouse.html">Treehouse</a>\<a href="namespace-LengthOfRope.Treehouse.CPT.html">CPT</a><br>
+		
+
+				<b>Author:</b>
+				LengthOfRope, Bas de Kort <a href="&#109;a&#x69;&#108;&#x74;&#111;&#x3a;&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a><br>
+			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#5-629" title="Go to source code">CPT/Create.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#42-70" title="Go to source code">__construct</a>( <span>string <var>$slug</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$slugPrefix</var> = <span class="php-quote">'th_'</span></span> )</code>
+
+		<div class="description short">
+			<p>Setup a new posttype</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Setup a new posttype</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$slug</var></dt>
+					<dd>The unique slug for this post type.</dd>
+					<dt><var>$args</var></dt>
+					<dd></dd>
+					<dt><var>$slugPrefix</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="factory" id="_factory">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_factory">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#81-91" title="Go to source code">factory</a>( <span>string <var>$slug</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$slugPrefix</var> = <span class="php-quote">'th_'</span></span> )</code>
+
+		<div class="description short">
+			<p>Factory to allow chaining</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Factory to allow chaining</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$slug</var></dt>
+					<dd>The unique slug for this post type.</dd>
+					<dt><var>$args</var></dt>
+					<dd></dd>
+					<dt><var>$slugPrefix</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLabel" id="_setLabel">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLabel">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#93-104" title="Go to source code">setLabel</a>( <span>string <var>$label</var></span> )</code>
+
+		<div class="description short">
+			<p>A plural descriptive name for the post type marked for translation.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>A plural descriptive name for the post type marked for translation.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$label</var></dt>
+					<dd>Descriptive name (plural)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLabels" id="_setLabels">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLabels">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#106-157" title="Go to source code">setLabels</a>( <span>string|array <var>$labels</var></span>, <span>string|false <var>$singularName</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>An array of labels for this post type.
+By default, post labels are used for non-hierarchical post types and page labels for hierarchical ones.
+Default: if empty, 'name' is set to value of 'label', and 'singular_name' is set to value of 'name'.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>An array of labels for this post type.
+By default, post labels are used for non-hierarchical post types and page labels for hierarchical ones.
+Default: if empty, 'name' is set to value of 'label', and 'singular_name' is set to value of 'name'.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$labels</var></dt>
+					<dd>If (plural) string, and singularName is also used, auto-generates all labels</dd>
+					<dt><var>$singularName</var></dt>
+					<dd>If string and labels is plural string, auto-generates all labels</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://codex.wordpress.org/Function_Reference/register_post_type<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDescription" id="_setDescription">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDescription">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#159-170" title="Go to source code">setDescription</a>( <span>string <var>$description</var></span> )</code>
+
+		<div class="description short">
+			<p>A short descriptive summary of what the post type is.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>A short descriptive summary of what the post type is.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$description</var></dt>
+					<dd>Summary of what the post type is.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPublic" id="_setPublic">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPublic">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#172-199" title="Go to source code">setPublic</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Controls how the type is visible to authors (show_in_nav_menus, show_ui) and
+readers (exclude_from_search, publicly_queryable).
+Default: false
+   'true'  - Implies exclude_from_search: false,
+                     publicly_queryable:  true,
+                     show_in_nav_menus:   true, and
+                     show_ui:             true.
+             The built-in types attachment, page, and post are similar to this.
+   'false' - Implies exclude_from_search: true,
+                     publicly_queryable:  false,
+                     show_in_nav_menus:   false, and
+                     show_ui: false.
+             The built-in types nav_menu_item and revision are similar to this.
+             Best used if you'll provide your own editing and viewing interfaces (or none at all).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Controls how the type is visible to authors (show_in_nav_menus, show_ui) and
+readers (exclude_from_search, publicly_queryable).
+Default: false 'true'  - Implies exclude_from_search: false, publicly_queryable:  true, show_in_nav_menus:   true, and show_ui:             true. The built-in types attachment, page, and post are similar to this. 'false' - Implies exclude_from_search: true, publicly_queryable:  false, show_in_nav_menus:   false, and show_ui: false. The built-in types nav_menu_item and revision are similar to this. Best used if you'll provide your own editing and viewing interfaces (or none at all).</p>
+
+<p>If no value is specified for exclude_from_search, publicly_queryable, show_in_nav_menus, or show_ui,
+they inherit their values from public.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setExcludeFromSearch" id="_setExcludeFromSearch">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setExcludeFromSearch">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#201-217" title="Go to source code">setExcludeFromSearch</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether to exclude posts with this post type from front end search results.
+Default: value of the opposite of public argument
+      'true'  - site/?s=search-term will not include posts of this post type.
+      'false' - site/?s=search-term will include posts of this post type.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether to exclude posts with this post type from front end search results.
+Default: value of the opposite of public argument 'true'  - site/?s=search-term will not include posts of this post type. 'false' - site/?s=search-term will include posts of this post type.</p>
+
+<p>Note: If you want to show the posts's list that are associated to taxonomy's terms, you must set exclude_from_search to false (ie : for call site_domaine/?taxonomy_slug=term_slug or site_domaine/taxonomy_slug/term_slug). If you set to true, on the taxonomy page (ex: taxonomy.php) WordPress will not find your posts and/or pagination will make 404 error...</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPubliclyQueryable" id="_setPubliclyQueryable">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPubliclyQueryable">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#219-239" title="Go to source code">setPubliclyQueryable</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether queries can be performed on the front end as part of parse_request().
+Default: value of public argument</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether queries can be performed on the front end as part of parse_request().
+Default: value of public argument</p>
+
+<p>Note: The queries affected include the following (also initiated when rewrites are handled) - ?post_type={post_type_key} - ?{post_type_key}={single_post_slug} - ?{post_type_query_var}={single_post_slug}</p>
+
+<p>Note: If query_var is empty, null, or a boolean FALSE, WordPress will still attempt to interpret it (4.2.2)
+and previews/views of your custom post will return 404s.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowUI" id="_setShowUI">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowUI">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#241-255" title="Go to source code">setShowUI</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether to generate a default UI for managing this post type in the admin.
+Default: value of public argument
+    'false' - do not display a user-interface for this post type
+    'true'  - display a user-interface (admin panel) for this post type</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether to generate a default UI for managing this post type in the admin.
+Default: value of public argument 'false' - do not display a user-interface for this post type 'true'  - display a user-interface (admin panel) for this post type</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowInNavMenus" id="_setShowInNavMenus">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowInNavMenus">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#257-269" title="Go to source code">setShowInNavMenus</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether post_type is available for selection in navigation menus.
+Default: value of public argument</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether post_type is available for selection in navigation menus.
+Default: value of public argument</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowInMenu" id="_setShowInMenu">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowInMenu">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#271-291" title="Go to source code">setShowInMenu</a>( <span>boolean|string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Where to show the post type in the admin menu. show_ui must be true.
+Default: value of show_ui argument
+    - 'false'       - do not display in the admin menu
+    - 'true'        - display as a top level menu
+    - 'some string' - If an existing top level page such as 'tools.php' or 'edit.php?post_type=page', the
+                      post type will be placed as a sub menu of that.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Where to show the post type in the admin menu. show_ui must be true.
+Default: value of show_ui argument - 'false'       - do not display in the admin menu - 'true'        - display as a top level menu - 'some string' - If an existing top level page such as 'tools.php' or 'edit.php?post_type=page', the post type will be placed as a sub menu of that.</p>
+
+<p>Note: When using 'some string' to show as a submenu of a menu page created by a plugin, this item will
+become the first submenu item, and replace the location of the top-level link. If this isn't desired,
+the plugin that creates the menu page needs to set the add_action priority for admin_menu to 9 or lower.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>True, false or string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowInAdminBar" id="_setShowInAdminBar">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowInAdminBar">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#293-305" title="Go to source code">setShowInAdminBar</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether to make this post type available in the WordPress admin bar.
+Default: value of the show_in_menu argument</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether to make this post type available in the WordPress admin bar.
+Default: value of the show_in_menu argument</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMenuPosition" id="_setMenuPosition">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMenuPosition">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#307-331" title="Go to source code">setMenuPosition</a>( <span>integer <var>$integer</var></span> )</code>
+
+		<div class="description short">
+			<p>The position in the menu order the post type should appear. show_in_menu must be true.
+Default: null - defaults to below Comments</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>The position in the menu order the post type should appear. show_in_menu must be true.
+Default: null - defaults to below Comments</p>
+
+<p>5   - below Posts
+10  - below Media
+15  - below Links
+20  - below Pages
+25  - below comments
+60  - below first separator
+65  - below Plugins
+70  - below Users
+75  - below Tools
+80  - below Settings
+100 - below second separator</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$integer</var></dt>
+					<dd>Sets the position in the menu</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMenuIcon" id="_setMenuIcon">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMenuIcon">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#333-349" title="Go to source code">setMenuIcon</a>( <span>string <var>$icon</var></span> )</code>
+
+		<div class="description short">
+			<p>The url to the icon to be used for this menu or the name of the icon from the iconfont [1]
+Default: null - defaults to the posts icon</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>The url to the icon to be used for this menu or the name of the icon from the iconfont [1]
+Default: null - defaults to the posts icon</p>
+
+<p>Examples:
+'dashicons-video-alt' (Uses the video icon from Dashicons[2])
+'get_template_directory_uri() . "/images/cutom-posttype-icon.png"' (Use an image located in the current theme)</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$icon</var></dt>
+					<dd>The url of the icon or the name in the iconfont</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHasArchive" id="_setHasArchive">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHasArchive">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#351-363" title="Go to source code">setHasArchive</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Enables post type archives. Will use $post_type as archive slug by default.
+Default: false</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Enables post type archives. Will use $post_type as archive slug by default.
+Default: false</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSupports" id="_setSupports">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSupports">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#365-391" title="Go to source code">setSupports</a>( <span>array|false <var>$supports</var></span> )</code>
+
+		<div class="description short">
+			<p>An alias for calling add_post_type_support() directly. As of 3.5, boolean false can be passed as value
+instead of an array to prevent default (title and editor) behavior.
+Default: title and editor</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>An alias for calling add_post_type_support() directly. As of 3.5, boolean false can be passed as value
+instead of an array to prevent default (title and editor) behavior.
+Default: title and editor</p>
+
+<p>Possible default values:
+- title
+- editor
+- author
+- thumbnail
+- excerpt
+- trackbacks
+- custom-fields
+- comments
+- revisions
+- page-attributes
+- post-formats</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$supports</var></dt>
+					<dd>Array of supported items</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCapabilityType" id="_setCapabilityType">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCapabilityType">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#393-411" title="Go to source code">setCapabilityType</a>( <span>string|array <var>$capabilityType</var></span> )</code>
+
+		<div class="description short">
+			<p>The string to use to build the read, edit, and delete capabilities. May be passed as an array to allow for
+alternative plurals when using this argument as a base to construct the capabilities,
+e.g. array('story', 'stories') the first array element will be used for the singular capabilities and
+the second array element for the plural capabilities, this is instead of the auto generated version if no
+array is given which would be "storys". The 'capability_type' parameter is used as a base to construct
+capabilities unless they are explicitly set with the 'capabilities' parameter.
+Default: "post"</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>The string to use to build the read, edit, and delete capabilities. May be passed as an array to allow for
+alternative plurals when using this argument as a base to construct the capabilities,
+e.g. array('story', 'stories') the first array element will be used for the singular capabilities and
+the second array element for the plural capabilities, this is instead of the auto generated version if no
+array is given which would be "storys". The 'capability_type' parameter is used as a base to construct
+capabilities unless they are explicitly set with the 'capabilities' parameter.
+Default: "post"</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$capabilityType</var></dt>
+					<dd>String or array with capability types</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://codex.wordpress.org/Function_Reference/register_post_type<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCapabilities" id="_setCapabilities">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCapabilities">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#413-454" title="Go to source code">setCapabilities</a>( <span>array <var>$capabilities</var></span> )</code>
+
+		<div class="description short">
+			<p>An array of the capabilities for this post type.
+Default: capability_type is used to construct</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>An array of the capabilities for this post type.
+Default: capability_type is used to construct</p>
+
+<p>By default, seven keys are accepted as part of the capabilities array:
+- edit_post, read_post, and delete_post These three are meta capabilities, which are then generally mapped to corresponding primitive capabilities depending on the context, for example post being edited/read/deleted and the user or role being checked. Thus these capabilities would generally not be granted directly to users or roles.
+- edit_posts - Controls whether objects of this post type can be edited.
+- edit_others_posts  - Controls whether objects of this type owned by other users can be edited. If the post type does not support an author, then this will behave like edit_posts.
+- publish_posts      - Controls publishing objects of this post type.
+- read_private_posts - Controls whether private objects can be read.</p>
+
+<p>Note 1: those last four primitive capabilities are checked in core in various locations.</p>
+
+<p>There are also eight other primitive capabilities which are not referenced directly in core, except in
+map_meta_cap(), which takes the three aforementioned meta capabilities and translates them into one or more
+primitive capabilities that must then be checked against the user or role, depending on the context.
+These additional capabilities are only used in map_meta_cap(). Thus, they are only assigned by default if
+the post type is registered with the 'map_meta_cap' argument set to true (default is false).
+- read                   - Controls whether objects of this post type can be read.
+- delete_posts           - Controls whether objects of this post type can be deleted.
+- delete_private_posts   - Controls whether private objects can be deleted.
+- delete_published_posts - Controls whether published objects can be deleted.
+- delete_others_posts    - Controls whether objects owned by other users can be can be deleted. If the post type does not support an author, then this will behave like delete_posts.
+- edit_private_posts     - Controls whether private objects can be edited.
+- edit_published_posts   - Controls whether published objects can be edited.
+- create_posts           - Controls whether new objects can be created</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$capabilities</var></dt>
+					<dd>Array with capabilities</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://codex.wordpress.org/Function_Reference/register_post_type<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMapMetaCap" id="_setMapMetaCap">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMapMetaCap">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#456-471" title="Go to source code">setMapMetaCap</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether to use the internal default meta capability handling.
+Default: null</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether to use the internal default meta capability handling.
+Default: null</p>
+
+<p>Note: If set it to false then standard admin role can't edit the posts types. Then the edit_post capability
+must be added to all roles to add or edit the posts types.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHierarchical" id="_setHierarchical">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHierarchical">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#473-486" title="Go to source code">setHierarchical</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether the post type is hierarchical (e.g. page). Allows Parent to be specified. The 'supports' parameter
+should contain 'page-attributes' to show the parent select box on the editor page.
+Default: false</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether the post type is hierarchical (e.g. page). Allows Parent to be specified. The 'supports' parameter
+should contain 'page-attributes' to show the parent select box on the editor page.
+Default: false</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRegisterMetaBoxCB" id="_setRegisterMetaBoxCB">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRegisterMetaBoxCB">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#488-502" title="Go to source code">setRegisterMetaBoxCB</a>( <span>function <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			<p>Provide a callback function that will be called when setting up the meta boxes for the edit form.
+The callback function takes one argument $post, which contains the WP_Post object for the currently edited post.
+Do remove_meta_box() and add_meta_box() calls in the callback.
+Default: None</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Provide a callback function that will be called when setting up the meta boxes for the edit form.
+The callback function takes one argument $post, which contains the WP_Post object for the currently edited post.
+Do remove_meta_box() and add_meta_box() calls in the callback.
+Default: None</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTaxonomies" id="_setTaxonomies">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTaxonomies">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#504-518" title="Go to source code">setTaxonomies</a>( <span>array <var>$taxonomies</var></span> )</code>
+
+		<div class="description short">
+			<p>An array of registered taxonomies like category or post_tag that will be used with this post type. This can
+be used in lieu of calling register_taxonomy_for_object_type() directly. Custom taxonomies still need to be
+registered with register_taxonomy().
+Default: no taxonomies</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>An array of registered taxonomies like category or post_tag that will be used with this post type. This can
+be used in lieu of calling register_taxonomy_for_object_type() directly. Custom taxonomies still need to be
+registered with register_taxonomy().
+Default: no taxonomies</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$taxonomies</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRewrite" id="_setRewrite">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRewrite">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#520-547" title="Go to source code">setRewrite</a>( <span>boolean|array <var>$rewrite</var></span> )</code>
+
+		<div class="description short">
+			<p>Triggers the handling of rewrites for this post type. To prevent rewrites, set to false.
+Default: true and use $post_type as slug</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Triggers the handling of rewrites for this post type. To prevent rewrites, set to false.
+Default: true and use $post_type as slug</p>
+
+<p>$args array 'slug'       => string Customize the permalink structure slug. Defaults to the $post_type value. Should be translatable. 'with_front' => bool Should the permalink structure be prepended with the front base. (example: if your permalink structure is /blog/, then your links will be: false->/news/, true->/blog/news/). Defaults to true 'feeds'      => bool Should a feed permalink structure be built for this post type. Defaults to has_archive value. 'pages'      => bool Should the permalink structure provide for pagination. Defaults to true</p>
+
+<p>Note: If registering a post type inside of a plugin, call flush_rewrite_rules() in your activation and
+deactivation hook (see Flushing Rewrite on Activation below). If flush_rewrite_rules() is not used, then
+you will have to manually go to Settings > Permalinks and refresh your permalink structure before your
+custom post type will show the correct structure.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rewrite</var></dt>
+					<dd>array with rewrite stuff</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setQueryVar" id="_setQueryVar">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setQueryVar">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#549-570" title="Go to source code">setQueryVar</a>( <span>boolean|string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets the query_var key for this post type.
+Default: true - set to $post_type
+    'false' - Disables query_var key use. A post type cannot be loaded at /?{query_var}={single_post_slug}
+    'string' - /?{query_var_string}={single_post_slug} will work as intended.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets the query_var key for this post type.
+Default: true - set to $post_type 'false' - Disables query_var key use. A post type cannot be loaded at /?{query_var}={single_post_slug} 'string' - /?{query_var_string}={single_post_slug} will work as intended.</p>
+
+<p>Note: The query_var parameter has no effect if the ‘publicly_queryable’ parameter is set to false. query_var
+adds the custom post type’s query var to the built-in query_vars array so that WordPress will recognize it.
+WordPress removes any query var not included in that array.</p>
+
+<p>If set to true it allows you to request a custom posts type (book) using this: example.com/?book=life-of-pi
+If set to a string rather than true (for example ‘publication’), you can do: example.com/?publication=life-of-pi</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>True or false or string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCanExport" id="_setCanExport">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCanExport">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#572-584" title="Go to source code">setCanExport</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Can this post_type be exported.
+Default: true</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Can this post_type be exported.
+Default: true</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowInRest" id="_setShowInRest">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowInRest">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#586-598" title="Go to source code">setShowInRest</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether to expose this post type in the REST API.
+Default: false</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether to expose this post type in the REST API.
+Default: false</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRestBase" id="_setRestBase">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRestBase">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#600-612" title="Go to source code">setRestBase</a>( <span>string <var>$restBase</var></span> )</code>
+
+		<div class="description short">
+			<p>The base slug that this post type will use when accessed using the REST API.
+Default: $post_type</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>The base slug that this post type will use when accessed using the REST API.
+Default: $post_type</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$restBase</var></dt>
+					<dd>Base slug for REST API</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRestControllerClass" id="_setRestControllerClass">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRestControllerClass">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#614-627" title="Go to source code">setRestControllerClass</a>( <span>string <var>$restControllerClass</var></span> )</code>
+
+		<div class="description short">
+			<p>An optional custom controller to use instead of WP_REST_Posts_Controller. Must be a subclass
+of WP_REST_Controller.
+Default: WP_REST_Posts_Controller</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>An optional custom controller to use instead of WP_REST_Posts_Controller. Must be a subclass
+of WP_REST_Controller.
+Default: WP_REST_Posts_Controller</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$restControllerClass</var></dt>
+					<dd>Controller class</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.CPT.Create.html">LengthOfRope\Treehouse\CPT\Create</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="slug" id="$slug">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#39" title="Go to source code"><var>$slug</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$slug" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="args" id="$args">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LengthOfRope.Treehouse.CPT.Create.html#40" title="Go to source code"><var>$args</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$args" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Treehouse CORE API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

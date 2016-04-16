@@ -20,11 +20,10 @@ class Core extends PluginComponent
 
         // Temporary test CPT
         CPT\Create::factory('products')
-            ->setName(__('Products'))
-            ->setNameSingular(__('Product'))
+            ->setLabel(__('Products'))
+            ->setLabels(__('Products'), __('Product'))
             ->setPublic(true)
-            ->setHasArchive(true)
-            ->setSupports(array('title', 'thumbnail'));
+            ->setHasArchive(true);
     }
 
 }

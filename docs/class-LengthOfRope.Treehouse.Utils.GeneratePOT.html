@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class LengthOfRope\Treehouse\Utils\PluginLoadPriority | Treehouse CORE</title>
+	<title>Class LengthOfRope\Treehouse\Utils\GeneratePOT | Treehouse CORE</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -62,8 +62,8 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-LengthOfRope.Treehouse.Utils.GeneratePOT.html">GeneratePOT</a></li>
-				<li class="active"><a href="class-LengthOfRope.Treehouse.Utils.PluginLoadPriority.html">PluginLoadPriority</a></li>
+				<li class="active"><a href="class-LengthOfRope.Treehouse.Utils.GeneratePOT.html">GeneratePOT</a></li>
+				<li><a href="class-LengthOfRope.Treehouse.Utils.PluginLoadPriority.html">PluginLoadPriority</a></li>
 				<li><a href="class-LengthOfRope.Treehouse.Utils.StringParser.html">StringParser</a></li>
 			</ul>
 
@@ -103,17 +103,14 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class PluginLoadPriority</h1>
+	<h1>Class GeneratePOT</h1>
 
 
 	<div class="description">
-	<p>All Treehouse plugins and themes depend on the Treehouse CORE plugin since
-this plugin houses all shared code. This class makes sure we load the
-Treehouse CORE plugin before any other Treehouse plugin without the need of
-converting to a mu-plugin since they are less flexible and can only be
-manually updated.</p>
+	<p>This is a helper class to retrieve all i18n:translate items from the xml files and converts them to an
+empty POT file.</p>
 
-<p>Note: themes are loaded at a later stage by default.</p>
+<p>Note: this is just a simle convertor and does not feature all possibilities of PO/POT files.</p>
 	</div>
 
 
@@ -132,7 +129,7 @@ manually updated.</p>
 
 				<b>Author:</b>
 				LengthOfRope, Bas de Kort <a href="&#109;a&#x69;&#108;&#x74;&#111;&#x3a;&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a><br>
-			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.Utils.PluginLoadPriority.html#5-100" title="Go to source code">Utils/PluginLoadPriority.php</a>
+			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.Utils.GeneratePOT.html#5-255" title="Go to source code">Utils/GeneratePOT.php</a>
 		<br>
 	</div>
 
@@ -140,66 +137,40 @@ manually updated.</p>
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="__construct" id="___construct">
+	<tr data-order="addPath" id="_addPath">
 
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-LengthOfRope.Treehouse.Utils.GeneratePOT.html">LengthOfRope\Treehouse\Utils\GeneratePOT</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Utils.PluginLoadPriority.html#21-30" title="Go to source code">__construct</a>( <span> <var>$pluginFile</var></span> )</code>
+		<a class="anchor" href="#_addPath">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Utils.GeneratePOT.html#54-70" title="Go to source code">addPath</a>( <span>type <var>$path</var></span>, <span> <var>$ext</var> = <span class="php-quote">&quot;xml&quot;</span></span> )</code>
 
 		<div class="description short">
-			
+			<p>Add a path to add all xml files in that path</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="filterActivePlugins" id="_filterActivePlugins">
-
-		<td class="attributes"><code>
-			 public 
-
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_filterActivePlugins">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Utils.PluginLoadPriority.html#32-53" title="Go to source code">filterActivePlugins</a>( <span>array <var>$plugins</var></span> )</code>
-
-		<div class="description short">
-			<p>This filter makes sure we load Treehouse CORE before any other Treehouse
-plugin or theme.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>This filter makes sure we load Treehouse CORE before any other Treehouse
-plugin or theme.</p>
+			<p>Add a path to add all xml files in that path</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$plugins</var></dt>
-					<dd>an array with all plugins we can filter on</dd>
+					<dt><var>$path</var></dt>
+					<dd></dd>
+					<dt><var>$ext</var></dt>
+					<dd></dd>
 				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Utils.GeneratePOT.html">LengthOfRope\Treehouse\Utils\GeneratePOT</a></code>
+				</div>
 
 
 
@@ -207,36 +178,38 @@ plugin or theme.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="filterActiveSitewidePlugins" id="_filterActiveSitewidePlugins">
+	<tr data-order="stripPathInComments" id="_stripPathInComments">
 
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-LengthOfRope.Treehouse.Utils.GeneratePOT.html">LengthOfRope\Treehouse\Utils\GeneratePOT</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_filterActiveSitewidePlugins">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Utils.PluginLoadPriority.html#55-82" title="Go to source code">filterActiveSitewidePlugins</a>( <span>array <var>$plugins</var></span> )</code>
+		<a class="anchor" href="#_stripPathInComments">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Utils.GeneratePOT.html#72-83" title="Go to source code">stripPathInComments</a>( <span>string <var>$path</var></span> )</code>
 
 		<div class="description short">
-			<p>This filter makes sure we load Treehouse CORE before any other Treehouse
-plugin or theme when loaded as a sitewide plugin.</p>
+			<p>Keep track of which paths to remove from the comments.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>This filter makes sure we load Treehouse CORE before any other Treehouse
-plugin or theme when loaded as a sitewide plugin.</p>
+			<p>Keep track of which paths to remove from the comments.</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$plugins</var></dt>
-					<dd>an array with all plugins we can filter on</dd>
+					<dt><var>$path</var></dt>
+					<dd></dd>
 				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Utils.GeneratePOT.html">LengthOfRope\Treehouse\Utils\GeneratePOT</a></code>
+				</div>
 
 
 
@@ -244,7 +217,43 @@ plugin or theme when loaded as a sitewide plugin.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="pluginActivation" id="_pluginActivation">
+	<tr data-order="parse" id="_parse">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Utils.GeneratePOT.html">LengthOfRope\Treehouse\Utils\GeneratePOT</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Utils.GeneratePOT.html#103-124" title="Go to source code">parse</a>( )</code>
+
+		<div class="description short">
+			<p>Parse all found files for i18n:translate strings
+Note: Yup this is very nasty stupid code</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Parse all found files for i18n:translate strings
+Note: Yup this is very nasty stupid code</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Utils.GeneratePOT.html">LengthOfRope\Treehouse\Utils\GeneratePOT</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="writePot" id="_writePot">
 
 		<td class="attributes"><code>
 			 public 
@@ -255,21 +264,23 @@ plugin or theme when loaded as a sitewide plugin.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_pluginActivation">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Utils.PluginLoadPriority.html#84-98" title="Go to source code">pluginActivation</a>( <span>boolean <var>$sitewide</var> = <span class="php-keyword1">false</span></span> )</code>
+		<a class="anchor" href="#_writePot">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Utils.GeneratePOT.html#219-253" title="Go to source code">writePot</a>( <span>string <var>$projectId</var></span>, <span>string <var>$file</var></span> )</code>
 
 		<div class="description short">
-			<p>This hook is run when the plugin is activated and required to force the plugin load order update.</p>
+			<p>Write an empty POT file containing all strings found</p>
 		</div>
 
 		<div class="description detailed hidden">
-			<p>This hook is run when the plugin is activated and required to force the plugin load order update.</p>
+			<p>Write an empty POT file containing all strings found</p>
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$sitewide</var></dt>
-					<dd>true on a multisite sitewide activation, false otherwise</dd>
+					<dt><var>$projectId</var></dt>
+					<dd>The Id and Version string</dd>
+					<dt><var>$file</var></dt>
+					<dd>File to write to</dd>
 				</dl></div>
 
 
