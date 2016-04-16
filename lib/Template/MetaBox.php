@@ -35,11 +35,11 @@ class MetaBox extends Template
     {
         parent::__construct($templateFile, $translationDomain);
 
-        $this->postTypes = $postTypes;
+        $this->postTypes  = $postTypes;
         $this->identifier = $identifier;
-        $this->title = $title;
-        $this->context = $context;
-        $this->priority = $priority;
+        $this->title      = $title;
+        $this->context    = $context;
+        $this->priority   = $priority;
 
         add_action('add_meta_boxes', function($postType) {
             $this->addMetaBoxAction($postType);
@@ -59,11 +59,10 @@ class MetaBox extends Template
         // Only add the meta box if the correct post type
         if (count($this->postTypes) === 0 || in_array($postType, $this->postTypes)) {
             wp_enqueue_media();
-            add_meta_box(
-                $this->identifier, $this->title,
+            add_meta_box($this->identifier, $this->title,
                 function($post) {
-                $this->renderMetaBoxContent($post);
-            }, $postType, $this->context, $this->priority
+                    $this->renderMetaBoxContent($post);
+                }, $postType, $this->context, $this->priority
             );
         }
     }
@@ -138,7 +137,7 @@ class MetaBox extends Template
     {
         // Check if our nonce is set.
         $nonceCheck = strtolower($this->identifier) . '_metabox_nonce';
-        $nonce = filter_input(INPUT_POST, $nonceCheck, FILTER_SANITIZE_STRING);
+        $nonce      = filter_input(INPUT_POST, $nonceCheck, FILTER_SANITIZE_STRING);
         if (!isset($nonce)) {
             return false;
         }
