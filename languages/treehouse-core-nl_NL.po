@@ -2,20 +2,105 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Treehouse Core\n"
-"POT-Creation-Date: 2016-04-14 13:19+0200\n"
+"POT-Creation-Date: 2016-04-17 19:28+0200\n"
+"PO-Revision-Date: 2016-04-17 19:31+0200\n"
+"Last-Translator: Bas de Kort <bdekort@gmail.com>\n"
+"Language-Team: LengthOfRope, Bas de Kort <bdekort@gmail.com>\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-04-14 13:21+0200\n"
-"Language-Team: LengthOfRope, Bas de Kort <bdekort@gmail.com>\n"
-"X-Generator: Poedit 1.8.7\n"
-"Last-Translator: \n"
+"X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: nl_NL\n"
 
-#: /lib/Component.php:69
+#: /lib/Component.php:72
 msgid "POT-file for component <strong>'%s'</strong> created."
 msgstr "POT-bestand voor component <strong>'%s'</strong> gemaakt."
+
+#: /lib/Register/PostType.php:132
+msgid "%s Archives"
+msgstr "%s Archieven"
+
+#: /lib/Register/PostType.php:133
+msgid "Parent %s:"
+msgstr "Bovenliggend %s:"
+
+#: /lib/Register/PostType.php:134
+msgid "All %s"
+msgstr "Alle %s"
+
+#: /lib/Register/PostType.php:135
+msgid "Add New %s"
+msgstr "Voeg Nieuw %s Toe"
+
+#: /lib/Register/PostType.php:135 /lib/Register/PostType.php:136
+msgid "Add New"
+msgstr "Voeg Toe"
+
+#: /lib/Register/PostType.php:135 /lib/Register/PostType.php:137
+msgid "New %s"
+msgstr "Nieuw %s"
+
+#: /lib/Register/PostType.php:138
+msgid "Edit %s"
+msgstr "Bewerk %s"
+
+#: /lib/Register/PostType.php:139
+msgid "Update %s"
+msgstr "Update %s"
+
+#: /lib/Register/PostType.php:140
+msgid "View %s"
+msgstr "Bekijk %s"
+
+#: /lib/Register/PostType.php:141
+msgid "Search %s"
+msgstr "Zoek %s"
+
+#: /lib/Register/PostType.php:142 /lib/Register/PostType.php:143
+msgid "No %s found"
+msgstr "Geen %s gevonden"
+
+#: /lib/Register/PostType.php:143
+msgid "No %s found in trash"
+msgstr "Geen %s gevonden in de prullenbak"
+
+#: /lib/Register/PostType.php:144
+msgid "Featured Image"
+msgstr "Uitgelichte Afbeelding"
+
+#: /lib/Register/PostType.php:145
+msgid "Set featured image"
+msgstr "Stel uitgelichte afbeelding in"
+
+#: /lib/Register/PostType.php:146
+msgid "Remove featured image"
+msgstr "Verwijder uitgelichte afbeelding"
+
+#: /lib/Register/PostType.php:147
+msgid "Use as featured image"
+msgstr "Gebruiken als uitgelichte afbeelding"
+
+#: /lib/Register/PostType.php:148
+msgid "Insert into %s"
+msgstr "Toevoegen aan %s"
+
+#: /lib/Register/PostType.php:149
+msgid "Uploaded to this %s"
+msgstr "Geupload naar dit %s"
+
+#: /lib/Register/PostType.php:150 /lib/Register/PostType.php:151
+#: /lib/Register/PostType.php:152
+msgid "%s list"
+msgstr "%s lijst"
+
+#: /lib/Register/PostType.php:151
+msgid "%s list navigation"
+msgstr "%s lijst navigatie"
+
+#: /lib/Register/PostType.php:152
+msgid "Filter %s list"
+msgstr "Filter %s lijst"
 
 #: /lib/Template/Template.php:32
 msgid "File %s does not exist."

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Treehouse Core \n"
-"POT-Creation-Date: 2016-04-16 20:58:09+0000\n"
+"POT-Creation-Date: 2016-04-17 17:27:49+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,8 +13,88 @@ msgstr ""
 msgid "POT-file for component <strong>'%s'</strong> created."
 msgstr ""
 
-#: /lib/CPT/Create.php:188
-msgid "Doing it wrong! Creation of CPT has already happened!"
+#: /lib/Register/PostType.php:132
+msgid "%s Archives"
+msgstr ""
+
+#: /lib/Register/PostType.php:133
+msgid "Parent %s:"
+msgstr ""
+
+#: /lib/Register/PostType.php:134
+msgid "All %s"
+msgstr ""
+
+#: /lib/Register/PostType.php:135
+msgid "Add New %s"
+msgstr ""
+
+#: /lib/Register/PostType.php:135 /lib/Register/PostType.php:136
+msgid "Add New"
+msgstr ""
+
+#: /lib/Register/PostType.php:135 /lib/Register/PostType.php:137
+msgid "New %s"
+msgstr ""
+
+#: /lib/Register/PostType.php:138
+msgid "Edit %s"
+msgstr ""
+
+#: /lib/Register/PostType.php:139
+msgid "Update %s"
+msgstr ""
+
+#: /lib/Register/PostType.php:140
+msgid "View %s"
+msgstr ""
+
+#: /lib/Register/PostType.php:141
+msgid "Search %s"
+msgstr ""
+
+#: /lib/Register/PostType.php:142 /lib/Register/PostType.php:143
+msgid "No %s found"
+msgstr ""
+
+#: /lib/Register/PostType.php:143
+msgid "No %s found in trash"
+msgstr ""
+
+#: /lib/Register/PostType.php:144
+msgid "Featured Image"
+msgstr ""
+
+#: /lib/Register/PostType.php:145
+msgid "Set featured image"
+msgstr ""
+
+#: /lib/Register/PostType.php:146
+msgid "Remove featured image"
+msgstr ""
+
+#: /lib/Register/PostType.php:147
+msgid "Use as featured image"
+msgstr ""
+
+#: /lib/Register/PostType.php:148
+msgid "Insert into %s"
+msgstr ""
+
+#: /lib/Register/PostType.php:149
+msgid "Uploaded to this %s"
+msgstr ""
+
+#: /lib/Register/PostType.php:150 /lib/Register/PostType.php:151 /lib/Register/PostType.php:152
+msgid "%s list"
+msgstr ""
+
+#: /lib/Register/PostType.php:151
+msgid "%s list navigation"
+msgstr ""
+
+#: /lib/Register/PostType.php:152
+msgid "Filter %s list"
 msgstr ""
 
 #: /lib/Template/Template.php:32

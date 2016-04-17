@@ -19,7 +19,7 @@ class Core extends PluginComponent
         parent::__construct(TH_CORE_FILE);
 
         // Temporary test CPT
-        CPT\Create::factory('products')
+        Register\PostType::factory('products')
             ->setLabel(__('Products'))
             ->setLabels(__('Products'), __('Product'))
             ->setPublic(true)

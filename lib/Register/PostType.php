@@ -1,6 +1,6 @@
 <?php
 
-namespace LengthOfRope\Treehouse\CPT;
+namespace LengthOfRope\Treehouse\Register;
 
 /**
  * A helper class to create Custom Post Types.
@@ -32,7 +32,7 @@ namespace LengthOfRope\Treehouse\CPT;
  *
  * @author LengthOfRope, Bas de Kort <bdekort@gmail.com>
  */
-class Create
+class PostType
 {
 
     private $created = false;
@@ -87,7 +87,7 @@ class Create
      */
     public static function factory($slug, $args = array(), $slugPrefix = 'th_')
     {
-        return new Create($slug, $args, $slugPrefix);
+        return new PostType($slug, $args, $slugPrefix);
     }
 
     /**
