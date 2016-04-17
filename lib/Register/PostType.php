@@ -7,7 +7,7 @@ namespace LengthOfRope\Treehouse\Register;
  *
  * It handles:
  * - Creation of the post type (with a prefix by default)
- * - Adding templates within the plugin for singles and archives.
+ * - Adding templates within the plugin for singles and archives (using setupTemplates method).
  * - Allows basic settings to be set through chaining
  *
  * Note: To make sure all translations are ready this should be called in an init action!
