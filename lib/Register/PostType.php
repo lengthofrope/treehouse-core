@@ -10,6 +10,8 @@ namespace LengthOfRope\Treehouse\Register;
  * - Adding templates within the plugin for singles and archives.
  * - Allows basic settings to be set through chaining
  *
+ * Note: To make sure all translations are ready this should be called in an init action!
+ *
  * Usage (ordinary mode):
  * <code>
  * new \LengthOfRope\Treehouse\CPT\Create('products', array(
@@ -64,9 +66,10 @@ class PostType
         );
         $this->args = array_merge($defaults, $args);
 
+        // Register the post type late in the init process, since it is probably created in a init action as well.
         add_action('init', function() {
             $this->registerCPT();
-        });
+        }, 99);
     }
 
     /**

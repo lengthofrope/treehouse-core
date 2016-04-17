@@ -19,11 +19,13 @@ class Core extends PluginComponent
         parent::__construct(TH_CORE_FILE);
 
         // Temporary test CPT
-        Register\PostType::factory('products')
-            ->setLabel(__('Products'))
-            ->setLabels(__('Products'), __('Product'))
-            ->setPublic(true)
-            ->setHasArchive(true);
+        add_action('init', function() {
+            Register\PostType::factory('products')
+                ->setLabel(__('Products'))
+                ->setLabels(__('Products'), __('Product'))
+                ->setPublic(true)
+                ->setHasArchive(true);
+        });
     }
 
 }
