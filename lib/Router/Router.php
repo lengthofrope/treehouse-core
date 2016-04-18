@@ -135,7 +135,7 @@ class Router
         $found = locate_template('archive-' . $this->slug . '.php', false);
 
         if (empty($found)) {
-            // The theme does not provide a template for the single, so provide our own
+            // The theme does not provide a template for the single, so provide our own.
             $ourTemplate = dirname($this->coreFile) . '/templates/archive-' . $this->slug . '.php';
 
             // If our plugin/ theme provides the file return it
