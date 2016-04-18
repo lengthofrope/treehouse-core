@@ -25,7 +25,7 @@ class Core extends PluginComponent
                 ->setLabels(__('Products'), __('Product'))
                 ->setPublic(true)
                 ->setHasArchive(true)
-                ->setupTemplates(TH_CORE_FILE);
+                ->setupRoutes(TH_CORE_FILE);
         });
     }
 

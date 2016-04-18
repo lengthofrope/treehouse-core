@@ -634,7 +634,7 @@ class PostType
     }
 
     /**
-     * Setup templates for this Post Type.
+     * Setup template routes for this Post Type.
      *
      * If theme does no provide the following files:
      * - single-{slug}.php
@@ -646,78 +646,13 @@ class PostType
      *
      * @param string $coreFile The __FILE__ variable of the plugin/ theme location
      */
-    public function setupTemplates($coreFile)
+    public function setupRoutes($coreFile)
     {
         $this->coreFile = $coreFile;
 
-        add_filter('single_template', function($singleTemplate) {
-            return $this->routeSingleTemplate($singleTemplate);
-        });
-
-        add_filter('archive_template', function($archiveTemplate) {
-            return $this->routeArchiveTemplate($archiveTemplate);
-        });
-    }
-
-    /**
-     * Handles the routing of the post type single template.
-     *
-     * @param string $singleTemplate The current selected single template
-     * @return string The converted selected single template, if any
-     */
-    private function routeSingleTemplate($singleTemplate)
-    {
-        // Get the current post
-        $post = get_post();
-
-        if ($post->post_type !== $this->slug) {
-            // Bail early
-            return $singleTemplate;
-        }
-
-        // Check if this template is found in the theme or child theme
-        $found = locate_template('single-' . $this->slug . '.php', false);
-
-        if (empty($found)) {
-            // The theme does not provide a template for the single, so provide our own
-            $ourTemplate = dirname($this->coreFile) . '/templates/single-' . $this->slug . '.php';
-
-            // If our plugin/ theme provides the file return it
-            if (is_file($ourTemplate)) {
-                $singleTemplate = $ourTemplate;
-            }
-        }
-
-        return $singleTemplate;
-    }
-
-    /**
-     * Handles the routing of the post type archive template.
-     *
-     * @param string $archiveTemplate The current selected archive template
-     * @return string The converted selected archive template, if any
-     */
-    private function routeArchiveTemplate($archiveTemplate)
-    {
-        if (!is_post_type_archive($this->slug)) {
-            // Bail early
-            return $archiveTemplate;
-        }
-
-        // Check if this template is found in the theme or child theme
-        $found = locate_template('archive-' . $this->slug . '.php', false);
-
-        if (empty($found)) {
-            // The theme does not provide a template for the single, so provide our own
-            $ourTemplate = dirname($this->coreFile) . '/templates/archive-' . $this->slug . '.php';
-
-            // If our plugin/ theme provides the file return it
-            if (is_file($ourTemplate)) {
-                $archiveTemplate = $ourTemplate;
-            }
-        }
-
-        return $archiveTemplate;
+        \LengthOfRope\Treehouse\Router\Router::factory($this->slug, $coreFile)
+            ->routeSingle()
+            ->routeArchive();
     }
 
 }
