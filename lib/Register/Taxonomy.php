@@ -54,7 +54,7 @@ class Taxonomy
      * @param array $args
      * @param string $slugPrefix
      */
-    public function __construct($slug, $objectType = null, $args = array(), $slugPrefix = 'th_tax_')
+    public function __construct($slug, $objectType = null, $args = array(), $slugPrefix = 'th-tax-')
     {
         // Add the slugPrefix to make sure it is a unique posttype.
         $this->slug = $slugPrefix . $slug;
@@ -99,7 +99,7 @@ class Taxonomy
      * @param array $args
      * @param string $slugPrefix
      */
-    public static function factory($slug, $objectType = null, $args = array(), $slugPrefix = 'th_')
+    public static function factory($slug, $objectType = null, $args = array(), $slugPrefix = 'th-')
     {
         return new Taxonomy($slug, $objectType, $args, $slugPrefix);
     }

@@ -48,7 +48,7 @@ class PostType
      * @param array $args
      * @param string $slugPrefix
      */
-    public function __construct($slug, $args = array(), $slugPrefix = 'th_')
+    public function __construct($slug, $args = array(), $slugPrefix = 'th-')
     {
         // Add the slugPrefix to make sure it is a unique posttype.
         $this->slug = $slugPrefix . $slug;
@@ -87,7 +87,7 @@ class PostType
      * @param array $args
      * @param string $slugPrefix
      */
-    public static function factory($slug, $args = array(), $slugPrefix = 'th_')
+    public static function factory($slug, $args = array(), $slugPrefix = 'th-')
     {
         return new PostType($slug, $args, $slugPrefix);
     }

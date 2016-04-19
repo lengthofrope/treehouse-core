@@ -27,10 +27,12 @@ class Core extends PluginComponent
                 ->setHasArchive(true)
                 ->setupRoutes(TH_CORE_FILE);
 
-            Register\Taxonomy::factory('prod_cat', array('th_products'))
-                ->setLabel(__('Product Categories'))
-                ->setLabels(__('Product Categories'), __('Product Category'))
+            Register\Taxonomy::factory('prod-attr', array('th-products'))
+                ->setLabel(__('Attributen'))
+                ->setLabels(__('Attributen'), __('Attribuut'))
                 ->setPublic(true)
+                ->setShowAdminColumn(true)
+                ->setHierarchical(true)
                 ->setupRoutes(TH_CORE_FILE);
         });
     }

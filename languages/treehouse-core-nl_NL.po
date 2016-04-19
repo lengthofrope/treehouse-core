@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Treehouse Core\n"
 "POT-Creation-Date: 2016-04-19 14:28+0200\n"
-"PO-Revision-Date: 2016-04-19 14:31+0200\n"
+"PO-Revision-Date: 2016-04-19 14:41+0200\n"
 "Last-Translator: Bas de Kort <bdekort@gmail.com>\n"
 "Language-Team: LengthOfRope, Bas de Kort <bdekort@gmail.com>\n"
 "Language: nl_NL\n"
@@ -23,7 +23,7 @@ msgstr "%s Archieven"
 
 #: /lib/Register/PostType.php:135 /lib/Register/Taxonomy.php:151
 msgid "Parent %s:"
-msgstr "Bovenliggend %s:"
+msgstr "Bovenliggende %s:"
 
 #: /lib/Register/PostType.php:136 /lib/Register/Taxonomy.php:144
 msgid "All %s"
@@ -31,7 +31,7 @@ msgstr "Alle %s"
 
 #: /lib/Register/PostType.php:137 /lib/Register/Taxonomy.php:148
 msgid "Add New %s"
-msgstr "Voeg Nieuw %s Toe"
+msgstr "Voeg Nieuwe %s Toe"
 
 #: /lib/Register/PostType.php:137 /lib/Register/PostType.php:138
 msgid "Add New"
