@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class LengthOfRope\Treehouse\Register\Taxonomy | Treehouse CORE</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-LengthOfRope.html">
+						LengthOfRope<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-LengthOfRope.Treehouse.html">
+						Treehouse<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-LengthOfRope.Treehouse.Register.html">
+						Register					</a>
+
+						</li>
+				<li>
+					<a href="namespace-LengthOfRope.Treehouse.Router.html">
+						Router					</a>
+
+						</li>
+				<li>
+					<a href="namespace-LengthOfRope.Treehouse.Template.html">
+						Template<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-LengthOfRope.Treehouse.Template.Services.html">
+						Services					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-LengthOfRope.Treehouse.Utils.html">
+						Utils					</a>
+
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-LengthOfRope.Treehouse.Register.PostType.html">PostType</a></li>
+				<li class="active"><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">Taxonomy</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-LengthOfRope.Treehouse.Register.html" title="Summary of LengthOfRope\Treehouse\Register"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Taxonomy</h1>
+
+
+	<div class="description">
+	<p>A helper class to create Custom Taxonomies.</p>
+
+<p>It handles:
+- Creation of the taxonomy (with a prefix by default)
+- Adding templates within the plugin for singles and archives (using setupTemplates method).
+- Allows basic settings to be set through chaining</p>
+
+<p>Note: To make sure all translations are ready this should be called in an init action!</p>
+
+<p>Usage (ordinary mode):</p>
+
+<pre><span class="php-keyword1">new</span> \LengthOfRope\Treehouse\Register\Taxonomy(<span class="php-quote">'product_categories'</span>, <span class="php-keyword1">array</span>(
+     <span class="php-quote">'labels'</span>      =&gt; <span class="php-keyword1">array</span>(
+         <span class="php-quote">'name'</span>          =&gt; __(<span class="php-quote">'Products'</span>),
+         <span class="php-quote">'singular_name'</span> =&gt; __(<span class="php-quote">'Product'</span>)
+     ),
+     <span class="php-quote">'public'</span>      =&gt; <span class="php-keyword1">true</span>,
+     <span class="php-quote">'has_archive'</span> =&gt; <span class="php-keyword1">true</span>,
+ ));</pre>
+
+<p>Usage (chained mode):</p>
+
+<pre>\LengthOfRope\Treehouse\Register\Taxonomy::factory(<span class="php-quote">'product_categories'</span>)
+     -&gt;setLabels(__(<span class="php-quote">'Product categories'</span>), __(<span class="php-quote">'Product category'</span>))
+     -&gt;setPublic(<span class="php-keyword1">true</span>)
+     -&gt;setHasArchive(<span class="php-keyword1">true</span>);</pre>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-LengthOfRope.html">LengthOfRope</a>\<a href="namespace-LengthOfRope.Treehouse.html">Treehouse</a>\<a href="namespace-LengthOfRope.Treehouse.Register.html">Register</a><br>
+		
+
+				<b>Author:</b>
+				LengthOfRope, Bas de Kort <a href="&#109;a&#x69;&#108;&#x74;&#111;&#x3a;&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a><br>
+			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#5-447" title="Go to source code">Register/Taxonomy.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#45-81" title="Go to source code">__construct</a>( <span>string <var>$slug</var></span>, <span>string|array <var>$objectType</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$slugPrefix</var> = <span class="php-quote">'th_tax_'</span></span> )</code>
+
+		<div class="description short">
+			<p>Setup a new taxonomy</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Setup a new taxonomy</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$slug</var></dt>
+					<dd>The unique slug for this taxonomy.</dd>
+					<dt><var>$objectType</var></dt>
+					<dd><p>Name of the object type for the taxonomy object.
+                                Object-types can be built-in Post Type or any Custom Post Type
+                                that may be registered. If null, the taxonomy must be manually added to the
+                                custom post type where it should be available.
+                                Note: remember the slugPrefix the Treehouse classes are adding!</p></dd>
+					<dt><var>$args</var></dt>
+					<dd></dd>
+					<dt><var>$slugPrefix</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="factory" id="_factory">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_factory">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#91-105" title="Go to source code">factory</a>( <span>string <var>$slug</var></span>, <span>string|array <var>$objectType</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$slugPrefix</var> = <span class="php-quote">'th_'</span></span> )</code>
+
+		<div class="description short">
+			<p>Factory to allow chaining</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Factory to allow chaining</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$slug</var></dt>
+					<dd>The unique slug for this taxonomy.</dd>
+					<dt><var>$objectType</var></dt>
+					<dd><p>Name of the object type for the taxonomy object.
+                                Object-types can be built-in Post Type or any Custom Post Type
+                                that may be registered. If null, the taxonomy must be manually added to the
+                                custom post type where it should be available.</p></dd>
+					<dt><var>$args</var></dt>
+					<dd></dd>
+					<dt><var>$slugPrefix</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLabel" id="_setLabel">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLabel">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#107-118" title="Go to source code">setLabel</a>( <span>string <var>$label</var></span> )</code>
+
+		<div class="description short">
+			<p>A plural descriptive name for the taxonomy marked for translation.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>A plural descriptive name for the taxonomy marked for translation.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$label</var></dt>
+					<dd>Descriptive name (plural)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setLabels" id="_setLabels">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setLabels">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#120-162" title="Go to source code">setLabels</a>( <span>string|array <var>$labels</var></span>, <span>string|false <var>$singularName</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>An array of labels for this taxonomy.
+By default tag labels are used for non-hierarchical types and category labels for hierarchical ones.
+Default: if empty, name is set to label value, and singular_name is set to name value</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>An array of labels for this taxonomy.
+By default tag labels are used for non-hierarchical types and category labels for hierarchical ones.
+Default: if empty, name is set to label value, and singular_name is set to name value</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$labels</var></dt>
+					<dd>If (plural) string, and singularName is also used, auto-generates all labels</dd>
+					<dt><var>$singularName</var></dt>
+					<dd>If string and labels is plural string, auto-generates all labels</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						https://codex.wordpress.org/Function_Reference/register_taxonomy<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setDescription" id="_setDescription">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setDescription">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#164-175" title="Go to source code">setDescription</a>( <span>string <var>$description</var></span> )</code>
+
+		<div class="description short">
+			<p>Include a description of the taxonomy.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Include a description of the taxonomy.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$description</var></dt>
+					<dd>Include a description of the taxonomy.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setPublic" id="_setPublic">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setPublic">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#177-188" title="Go to source code">setPublic</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>If the taxonomy should be publicly queryable.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>If the taxonomy should be publicly queryable.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowUI" id="_setShowUI">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowUI">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#190-203" title="Go to source code">setShowUI</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether to generate a default UI for managing this taxonomy.
+Default: if not set, defaults to value of public argument. As of 3.5, setting this to false for
+attachment taxonomies will hide the UI.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether to generate a default UI for managing this taxonomy.
+Default: if not set, defaults to value of public argument. As of 3.5, setting this to false for
+attachment taxonomies will hide the UI.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowInNavMenus" id="_setShowInNavMenus">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowInNavMenus">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#205-217" title="Go to source code">setShowInNavMenus</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>True makes this taxonomy available for selection in navigation menus.
+Default: if not set, defaults to value of public argument</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>True makes this taxonomy available for selection in navigation menus.
+Default: if not set, defaults to value of public argument</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowInMenu" id="_setShowInMenu">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowInMenu">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#219-233" title="Go to source code">setShowInMenu</a>( <span>boolean <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Where to show the taxonomy in the admin menu. show_ui must be true.
+Default: value of show_ui argument
+    'false' - do not display in the admin menu
+    'true' - show as a submenu of associated object types</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Where to show the taxonomy in the admin menu. show_ui must be true.
+Default: value of show_ui argument 'false' - do not display in the admin menu 'true' - show as a submenu of associated object types</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>True, or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowTagcloud" id="_setShowTagcloud">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowTagcloud">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#235-247" title="Go to source code">setShowTagcloud</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether to allow the Tag Cloud widget to use this taxonomy.
+Default: if not set, defaults to value of show_ui argument</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether to allow the Tag Cloud widget to use this taxonomy.
+Default: if not set, defaults to value of show_ui argument</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowInQuickEdit" id="_setShowInQuickEdit">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowInQuickEdit">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#249-261" title="Go to source code">setShowInQuickEdit</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether to show the taxonomy in the quick/bulk edit panel. (Available since 4.2)
+Default: if not set, defaults to value of show_ui argument</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether to show the taxonomy in the quick/bulk edit panel. (Available since 4.2)
+Default: if not set, defaults to value of show_ui argument</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMetaBoxCB" id="_setMetaBoxCB">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMetaBoxCB">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#263-279" title="Go to source code">setMetaBoxCB</a>( <span>function|false <var>$callback</var></span> )</code>
+
+		<div class="description short">
+			<p>Provide a callback function name for the meta box display. (Available since 3.8)
+Default: null</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Provide a callback function name for the meta box display. (Available since 3.8)
+Default: null</p>
+
+<p>Note: Defaults to the categories meta box (post_categories_meta_box() in meta-boxes.php) for hierarchical
+taxonomies and the tags meta box (post_tags_meta_box()) for non-hierarchical taxonomies. No meta box
+is shown if set to false.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$callback</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setShowAdminColumn" id="_setShowAdminColumn">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setShowAdminColumn">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#281-293" title="Go to source code">setShowAdminColumn</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether to allow automatic creation of taxonomy columns on associated post-types table. (Available since 3.5)
+Default: false</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether to allow automatic creation of taxonomy columns on associated post-types table. (Available since 3.5)
+Default: false</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setHierarchical" id="_setHierarchical">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setHierarchical">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#295-311" title="Go to source code">setHierarchical</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Is this taxonomy hierarchical (have descendants) like categories or not hierarchical like tags.
+Default: false</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Is this taxonomy hierarchical (have descendants) like categories or not hierarchical like tags.
+Default: false</p>
+
+<p>Note: Hierarchical taxonomies will have a list with checkboxes to select an existing category in the
+taxonomy admin box on the post edit page (like default post categories). Non-hierarchical taxonomies will
+just have an empty text field to type-in taxonomy terms to associate with the post (like default post tags).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setUpdateCountCB" id="_setUpdateCountCB">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setUpdateCountCB">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#313-346" title="Go to source code">setUpdateCountCB</a>( <span>string <var>$functionName</var></span> )</code>
+
+		<div class="description short">
+			<p>A function name that will be called when the count of an associated $object_type, such as post, is updated.
+Works much like a hook.
+Default: None - but see Note, below.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>A function name that will be called when the count of an associated $object_type, such as post, is updated.
+Works much like a hook.
+Default: None - but see Note, below.</p>
+
+<p>Note: While the default is '', when actually performing the count update in wp_update_term_count_now(), if
+the taxonomy is only attached to post types (as opposed to other WordPress objects, like user),
+the built-in _update_post_term_count() function will be used to count only published posts associated
+with that term, otherwise _update_generic_term_count() will be used instead, that does no such checking.</p>
+
+<p>This is significant in the case of attachments. Because an attachment is a type of post, the
+default _update_post_term_count() will be used. However, this may be undesirable, because this will
+only count attachments that are actually attached to another post (like when you insert an image into
+a post). This means that attachments that you simply upload to WordPress using the Media Library, but
+do not actually attach to another post will not be counted. If your intention behind associating a
+taxonomy with attachments was to leverage the Media Library as a sort of Document Management solution,
+you are probably more interested in the counts of unattached Media items, than in those attached to posts.
+In this case, you should force the use of _update_generic_term_count() by setting '_update_generic_term_count'
+as the value for update_count_callback.</p>
+
+<p>Another important consideration is that _update_post_term_count() only counts published posts. If you are
+using custom statuses, or using custom post types where being published is not necessarily a consideration
+for being counted in the term count, then you will need to provide your own callback that doesn't include
+the post_status portion of the where clause.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$functionName</var></dt>
+					<dd>A function name that will be called when the count is updated.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setQueryVar" id="_setQueryVar">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setQueryVar">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#348-366" title="Go to source code">setQueryVar</a>( <span>boolean|string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>False to disable the query_var, set as string to use custom query_var instead of default which
+is $taxonomy, the taxonomy's "name".
+Default: $taxonomy</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>False to disable the query_var, set as string to use custom query_var instead of default which
+is $taxonomy, the taxonomy's "name".
+Default: $taxonomy</p>
+
+<p>Note: The query_var is used for direct queries through WP_Query like
+new WP_Query(array('people'=>$person_name)) and URL queries like /?people=$person_name. Setting query_var
+to false will disable these methods, but you can still fetch posts with an explicit WP_Query taxonomy
+query like WP_Query(array('taxonomy'=>'people', 'term'=>$person_name)).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>True or false or string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRewrite" id="_setRewrite">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRewrite">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#368-392" title="Go to source code">setRewrite</a>( <span>boolean|array <var>$rewrite</var></span> )</code>
+
+		<div class="description short">
+			<p>Set to false to prevent automatic URL rewriting a.k.a. "pretty permalinks". Pass an $args array to
+override default URL settings for permalinks as outlined below:
+Default: true
+    'slug'         - Used as pretty permalink text (i.e. /tag/) - defaults to $taxonomy (taxonomy's name slug)
+    'with_front'   - allowing permalinks to be prepended with front base - defaults to true
+    'hierarchical' - true or false allow hierarchical urls (implemented in Version 3.1) - defaults to false
+    'ep_mask'      - (Required for pretty permalinks) Assign an endpoint mask for this taxonomy -
+                     defaults to EP_NONE. If you do not specify the EP_MASK, pretty permalinks will not work.
+                     For more info see this Make WordPress Plugins summary of endpoints.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set to false to prevent automatic URL rewriting a.k.a. "pretty permalinks". Pass an $args array to
+override default URL settings for permalinks as outlined below:
+Default: true 'slug'         - Used as pretty permalink text (i.e. /tag/) - defaults to $taxonomy (taxonomy's name slug) 'with_front'   - allowing permalinks to be prepended with front base - defaults to true 'hierarchical' - true or false allow hierarchical urls (implemented in Version 3.1) - defaults to false 'ep_mask'      - (Required for pretty permalinks) Assign an endpoint mask for this taxonomy - defaults to EP_NONE. If you do not specify the EP_MASK, pretty permalinks will not work. For more info see this Make WordPress Plugins summary of endpoints.</p>
+
+<p>Note: You may need to flush the rewrite rules after changing this. You can do it manually by going to the
+Permalink Settings page and re-saving the rules -- you don't need to change them -- or by calling
+$wp_rewrite->flush_rules(). You should only flush the rules once after the taxonomy has been created, not
+every time the plugin/theme loads.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rewrite</var></dt>
+					<dd>array with rewrite stuff</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCapabilities" id="_setCapabilities">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCapabilities">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#394-410" title="Go to source code">setCapabilities</a>( <span>array <var>$capabilities</var></span> )</code>
+
+		<div class="description short">
+			<p>An array of the capabilities for this taxonomy.
+Default: None
+    'manage_terms' - 'manage_categories'
+    'edit_terms'   - 'manage_categories'
+    'delete_terms' - 'manage_categories'
+    'assign_terms' - 'edit_posts'</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>An array of the capabilities for this taxonomy.
+Default: None 'manage_terms' - 'manage_categories' 'edit_terms'   - 'manage_categories' 'delete_terms' - 'manage_categories' 'assign_terms' - 'edit_posts'</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$capabilities</var></dt>
+					<dd>array with capabilities</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setSort" id="_setSort">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setSort">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#412-424" title="Go to source code">setSort</a>( <span>boolean <var>$boolean</var></span> )</code>
+
+		<div class="description short">
+			<p>Whether this taxonomy should remember the order in which terms are added to objects.
+Default: None</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Whether this taxonomy should remember the order in which terms are added to objects.
+Default: None</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$boolean</var></dt>
+					<dd>True or false</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">LengthOfRope\Treehouse\Register\Taxonomy</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setupRoutes" id="_setupRoutes">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setupRoutes">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#426-445" title="Go to source code">setupRoutes</a>( <span>string <var>$coreFile</var></span> )</code>
+
+		<div class="description short">
+			<p>Setup template routes for this taxonomy.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Setup template routes for this taxonomy.</p>
+
+<p>If theme does no provide the following files:
+- single-{slug}.php
+- archive-(slug}.php</p>
+
+<p>This will check the plugin/ theme if the file exists in this location and serves that file
+- /templates/single-{slug}.php
+- /templates/archive-{slug}.php</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$coreFile</var></dt>
+					<dd>The <strong>FILE</strong> variable of the plugin/ theme location</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="slug" id="$slug">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#41" title="Go to source code"><var>$slug</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$slug" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="objectType" id="$objectType">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#42" title="Go to source code"><var>$objectType</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$objectType" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="args" id="$args">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-LengthOfRope.Treehouse.Register.Taxonomy.html#43" title="Go to source code"><var>$args</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$args" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Treehouse CORE API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

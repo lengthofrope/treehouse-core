@@ -68,6 +68,7 @@
 			<h3>Classes</h3>
 			<ul>
 				<li class="active"><a href="class-LengthOfRope.Treehouse.Register.PostType.html">PostType</a></li>
+				<li><a href="class-LengthOfRope.Treehouse.Register.Taxonomy.html">Taxonomy</a></li>
 			</ul>
 
 
@@ -121,7 +122,7 @@
 
 <p>Usage (ordinary mode):</p>
 
-<pre><span class="php-keyword1">new</span> \LengthOfRope\Treehouse\CPT\Create(<span class="php-quote">'products'</span>, <span class="php-keyword1">array</span>(
+<pre><span class="php-keyword1">new</span> \LengthOfRope\Treehouse\Register\PostType(<span class="php-quote">'products'</span>, <span class="php-keyword1">array</span>(
      <span class="php-quote">'labels'</span>      =&gt; <span class="php-keyword1">array</span>(
          <span class="php-quote">'name'</span>          =&gt; __(<span class="php-quote">'Products'</span>),
          <span class="php-quote">'singular_name'</span> =&gt; __(<span class="php-quote">'Product'</span>)
@@ -132,7 +133,7 @@
 
 <p>Usage (chained mode):</p>
 
-<pre>\LengthOfRope\Treehouse\CPT\Create::factory(<span class="php-quote">'products'</span>)
+<pre>\LengthOfRope\Treehouse\Register\PostType::factory(<span class="php-quote">'products'</span>)
      -&gt;setLabels(__(<span class="php-quote">'Products'</span>), __(<span class="php-quote">'Product'</span>))
      -&gt;setPublic(<span class="php-keyword1">true</span>)
      -&gt;setHasArchive(<span class="php-keyword1">true</span>);</pre>
@@ -154,7 +155,7 @@
 
 				<b>Author:</b>
 				LengthOfRope, Bas de Kort <a href="&#109;a&#x69;&#108;&#x74;&#111;&#x3a;&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a><br>
-			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#5-658" title="Go to source code">Register/PostType.php</a>
+			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#5-656" title="Go to source code">Register/PostType.php</a>
 		<br>
 	</div>
 
@@ -174,7 +175,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#45-74" title="Go to source code">__construct</a>( <span>string <var>$slug</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$slugPrefix</var> = <span class="php-quote">'th_'</span></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#44-73" title="Go to source code">__construct</a>( <span>string <var>$slug</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$slugPrefix</var> = <span class="php-quote">'th_'</span></span> )</code>
 
 		<div class="description short">
 			<p>Setup a new posttype</p>
@@ -213,7 +214,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_factory">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#85-95" title="Go to source code">factory</a>( <span>string <var>$slug</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$slugPrefix</var> = <span class="php-quote">'th_'</span></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#83-93" title="Go to source code">factory</a>( <span>string <var>$slug</var></span>, <span>array <var>$args</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$slugPrefix</var> = <span class="php-quote">'th_'</span></span> )</code>
 
 		<div class="description short">
 			<p>Factory to allow chaining</p>
@@ -245,14 +246,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setLabel">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#97-108" title="Go to source code">setLabel</a>( <span>string <var>$label</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#95-106" title="Go to source code">setLabel</a>( <span>string <var>$label</var></span> )</code>
 
 		<div class="description short">
 			<p>A plural descriptive name for the post type marked for translation.</p>
@@ -270,7 +271,7 @@
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -284,14 +285,14 @@
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setLabels">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#110-161" title="Go to source code">setLabels</a>( <span>string|array <var>$labels</var></span>, <span>string|false <var>$singularName</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#108-159" title="Go to source code">setLabels</a>( <span>string|array <var>$labels</var></span>, <span>string|false <var>$singularName</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>An array of labels for this post type.
@@ -315,7 +316,7 @@ Default: if empty, 'name' is set to value of 'label', and 'singular_name' is set
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -333,14 +334,14 @@ Default: if empty, 'name' is set to value of 'label', and 'singular_name' is set
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setDescription">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#163-174" title="Go to source code">setDescription</a>( <span>string <var>$description</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#161-172" title="Go to source code">setDescription</a>( <span>string <var>$description</var></span> )</code>
 
 		<div class="description short">
 			<p>A short descriptive summary of what the post type is.</p>
@@ -358,7 +359,7 @@ Default: if empty, 'name' is set to value of 'label', and 'singular_name' is set
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -372,14 +373,14 @@ Default: if empty, 'name' is set to value of 'label', and 'singular_name' is set
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPublic">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#176-203" title="Go to source code">setPublic</a>( <span>boolean <var>$boolean</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#174-201" title="Go to source code">setPublic</a>( <span>boolean <var>$boolean</var></span> )</code>
 
 		<div class="description short">
 			<p>Controls how the type is visible to authors (show_in_nav_menus, show_ui) and
@@ -415,7 +416,7 @@ they inherit their values from public.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -429,14 +430,14 @@ they inherit their values from public.</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setExcludeFromSearch">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#205-224" title="Go to source code">setExcludeFromSearch</a>( <span>boolean <var>$boolean</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#203-222" title="Go to source code">setExcludeFromSearch</a>( <span>boolean <var>$boolean</var></span> )</code>
 
 		<div class="description short">
 			<p>Whether to exclude posts with this post type from front end search results.
@@ -463,7 +464,7 @@ will not find your posts and/or pagination will make 404 error...</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -477,14 +478,14 @@ will not find your posts and/or pagination will make 404 error...</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setPubliclyQueryable">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#226-246" title="Go to source code">setPubliclyQueryable</a>( <span>boolean <var>$boolean</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#224-244" title="Go to source code">setPubliclyQueryable</a>( <span>boolean <var>$boolean</var></span> )</code>
 
 		<div class="description short">
 			<p>Whether queries can be performed on the front end as part of parse_request().
@@ -509,7 +510,7 @@ and previews/views of your custom post will return 404s.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -523,14 +524,14 @@ and previews/views of your custom post will return 404s.</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setShowUI">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#248-262" title="Go to source code">setShowUI</a>( <span>boolean <var>$boolean</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#246-260" title="Go to source code">setShowUI</a>( <span>boolean <var>$boolean</var></span> )</code>
 
 		<div class="description short">
 			<p>Whether to generate a default UI for managing this post type in the admin.
@@ -552,7 +553,7 @@ Default: value of public argument 'false' - do not display a user-interface for 
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -566,14 +567,14 @@ Default: value of public argument 'false' - do not display a user-interface for 
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setShowInNavMenus">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#264-276" title="Go to source code">setShowInNavMenus</a>( <span>boolean <var>$boolean</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#262-274" title="Go to source code">setShowInNavMenus</a>( <span>boolean <var>$boolean</var></span> )</code>
 
 		<div class="description short">
 			<p>Whether post_type is available for selection in navigation menus.
@@ -593,7 +594,7 @@ Default: value of public argument</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -607,14 +608,14 @@ Default: value of public argument</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setShowInMenu">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#278-298" title="Go to source code">setShowInMenu</a>( <span>boolean|string <var>$value</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#276-296" title="Go to source code">setShowInMenu</a>( <span>boolean|string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Where to show the post type in the admin menu. show_ui must be true.
@@ -642,7 +643,7 @@ the plugin that creates the menu page needs to set the add_action priority for a
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -656,14 +657,14 @@ the plugin that creates the menu page needs to set the add_action priority for a
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setShowInAdminBar">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#300-312" title="Go to source code">setShowInAdminBar</a>( <span>boolean <var>$boolean</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#298-310" title="Go to source code">setShowInAdminBar</a>( <span>boolean <var>$boolean</var></span> )</code>
 
 		<div class="description short">
 			<p>Whether to make this post type available in the WordPress admin bar.
@@ -683,7 +684,7 @@ Default: value of the show_in_menu argument</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -697,14 +698,14 @@ Default: value of the show_in_menu argument</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setMenuPosition">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#314-338" title="Go to source code">setMenuPosition</a>( <span>integer <var>$integer</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#312-336" title="Go to source code">setMenuPosition</a>( <span>integer <var>$integer</var></span> )</code>
 
 		<div class="description short">
 			<p>The position in the menu order the post type should appear. show_in_menu must be true.
@@ -736,7 +737,7 @@ Default: null - defaults to below Comments</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -750,14 +751,14 @@ Default: null - defaults to below Comments</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setMenuIcon">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#340-356" title="Go to source code">setMenuIcon</a>( <span>string <var>$icon</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#338-354" title="Go to source code">setMenuIcon</a>( <span>string <var>$icon</var></span> )</code>
 
 		<div class="description short">
 			<p>The url to the icon to be used for this menu or the name of the icon from the iconfont [1]
@@ -781,7 +782,7 @@ Default: null - defaults to the posts icon</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -795,14 +796,14 @@ Default: null - defaults to the posts icon</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setHasArchive">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#358-370" title="Go to source code">setHasArchive</a>( <span>boolean <var>$boolean</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#356-368" title="Go to source code">setHasArchive</a>( <span>boolean <var>$boolean</var></span> )</code>
 
 		<div class="description short">
 			<p>Enables post type archives. Will use $post_type as archive slug by default.
@@ -822,7 +823,7 @@ Default: false</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -836,14 +837,14 @@ Default: false</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setSupports">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#372-398" title="Go to source code">setSupports</a>( <span>array|false <var>$supports</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#370-396" title="Go to source code">setSupports</a>( <span>array|false <var>$supports</var></span> )</code>
 
 		<div class="description short">
 			<p>An alias for calling add_post_type_support() directly. As of 3.5, boolean false can be passed as value
@@ -878,7 +879,7 @@ Default: title and editor</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -892,14 +893,14 @@ Default: title and editor</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setCapabilityType">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#400-418" title="Go to source code">setCapabilityType</a>( <span>string|array <var>$capabilityType</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#398-416" title="Go to source code">setCapabilityType</a>( <span>string|array <var>$capabilityType</var></span> )</code>
 
 		<div class="description short">
 			<p>The string to use to build the read, edit, and delete capabilities. May be passed as an array to allow for
@@ -929,7 +930,7 @@ Default: "post"</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -947,14 +948,14 @@ Default: "post"</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setCapabilities">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#420-461" title="Go to source code">setCapabilities</a>( <span>array <var>$capabilities</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#418-459" title="Go to source code">setCapabilities</a>( <span>array <var>$capabilities</var></span> )</code>
 
 		<div class="description short">
 			<p>An array of the capabilities for this post type.
@@ -997,7 +998,7 @@ the post type is registered with the 'map_meta_cap' argument set to true (defaul
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -1015,14 +1016,14 @@ the post type is registered with the 'map_meta_cap' argument set to true (defaul
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setMapMetaCap">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#463-478" title="Go to source code">setMapMetaCap</a>( <span>boolean <var>$boolean</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#461-476" title="Go to source code">setMapMetaCap</a>( <span>boolean <var>$boolean</var></span> )</code>
 
 		<div class="description short">
 			<p>Whether to use the internal default meta capability handling.
@@ -1045,7 +1046,7 @@ must be added to all roles to add or edit the posts types.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -1059,14 +1060,14 @@ must be added to all roles to add or edit the posts types.</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setHierarchical">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#480-493" title="Go to source code">setHierarchical</a>( <span>boolean <var>$boolean</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#478-491" title="Go to source code">setHierarchical</a>( <span>boolean <var>$boolean</var></span> )</code>
 
 		<div class="description short">
 			<p>Whether the post type is hierarchical (e.g. page). Allows Parent to be specified. The 'supports' parameter
@@ -1088,7 +1089,7 @@ Default: false</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -1102,14 +1103,14 @@ Default: false</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setRegisterMetaBoxCB">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#495-509" title="Go to source code">setRegisterMetaBoxCB</a>( <span>function <var>$callback</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#493-507" title="Go to source code">setRegisterMetaBoxCB</a>( <span>function <var>$callback</var></span> )</code>
 
 		<div class="description short">
 			<p>Provide a callback function that will be called when setting up the meta boxes for the edit form.
@@ -1133,7 +1134,7 @@ Default: None</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -1147,14 +1148,14 @@ Default: None</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setTaxonomies">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#511-525" title="Go to source code">setTaxonomies</a>( <span>array <var>$taxonomies</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#509-523" title="Go to source code">setTaxonomies</a>( <span>array <var>$taxonomies</var></span> )</code>
 
 		<div class="description short">
 			<p>An array of registered taxonomies like category or post_tag that will be used with this post type. This can
@@ -1178,7 +1179,7 @@ Default: no taxonomies</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -1192,14 +1193,14 @@ Default: no taxonomies</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setRewrite">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#527-554" title="Go to source code">setRewrite</a>( <span>boolean|array <var>$rewrite</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#525-552" title="Go to source code">setRewrite</a>( <span>boolean|array <var>$rewrite</var></span> )</code>
 
 		<div class="description short">
 			<p>Triggers the handling of rewrites for this post type. To prevent rewrites, set to false.
@@ -1226,7 +1227,7 @@ custom post type will show the correct structure.</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -1240,14 +1241,14 @@ custom post type will show the correct structure.</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setQueryVar">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#556-577" title="Go to source code">setQueryVar</a>( <span>boolean|string <var>$value</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#554-575" title="Go to source code">setQueryVar</a>( <span>boolean|string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Sets the query_var key for this post type.
@@ -1276,7 +1277,7 @@ If set to a string rather than true (for example ‘publication’), do: example
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -1290,14 +1291,14 @@ If set to a string rather than true (for example ‘publication’), do: example
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setCanExport">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#579-591" title="Go to source code">setCanExport</a>( <span>boolean <var>$boolean</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#577-589" title="Go to source code">setCanExport</a>( <span>boolean <var>$boolean</var></span> )</code>
 
 		<div class="description short">
 			<p>Can this post_type be exported.
@@ -1317,7 +1318,7 @@ Default: true</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -1331,14 +1332,14 @@ Default: true</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setShowInRest">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#593-605" title="Go to source code">setShowInRest</a>( <span>boolean <var>$boolean</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#591-603" title="Go to source code">setShowInRest</a>( <span>boolean <var>$boolean</var></span> )</code>
 
 		<div class="description short">
 			<p>Whether to expose this post type in the REST API.
@@ -1358,7 +1359,7 @@ Default: false</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -1372,14 +1373,14 @@ Default: false</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setRestBase">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#607-619" title="Go to source code">setRestBase</a>( <span>string <var>$restBase</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#605-617" title="Go to source code">setRestBase</a>( <span>string <var>$restBase</var></span> )</code>
 
 		<div class="description short">
 			<p>The base slug that this post type will use when accessed using the REST API.
@@ -1399,7 +1400,7 @@ Default: $post_type</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -1413,14 +1414,14 @@ Default: $post_type</p>
 		<td class="attributes"><code>
 			 public 
 
-			LengthOfRope\Treehouse\CPT\Create
+			<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setRestControllerClass">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#621-634" title="Go to source code">setRestControllerClass</a>( <span>string <var>$restControllerClass</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#619-632" title="Go to source code">setRestControllerClass</a>( <span>string <var>$restControllerClass</var></span> )</code>
 
 		<div class="description short">
 			<p>An optional custom controller to use instead of WP_REST_Posts_Controller. Must be a subclass
@@ -1442,7 +1443,7 @@ Default: WP_REST_Posts_Controller</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					LengthOfRope\Treehouse\CPT\Create
+					<code><a href="class-LengthOfRope.Treehouse.Register.PostType.html">LengthOfRope\Treehouse\Register\PostType</a></code>
 				</div>
 
 
@@ -1463,7 +1464,7 @@ Default: WP_REST_Posts_Controller</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setupRoutes">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#636-656" title="Go to source code">setupRoutes</a>( <span>string <var>$coreFile</var></span> )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#634-654" title="Go to source code">setupRoutes</a>( <span>string <var>$coreFile</var></span> )</code>
 
 		<div class="description short">
 			<p>Setup template routes for this Post Type.</p>
@@ -1516,7 +1517,7 @@ Default: WP_REST_Posts_Controller</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#42" title="Go to source code"><var>$slug</var></a>
+				<a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#41" title="Go to source code"><var>$slug</var></a>
 
 			<div class="description short">
 				
@@ -1541,7 +1542,7 @@ Default: WP_REST_Posts_Controller</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#43" title="Go to source code"><var>$args</var></a>
+				<a href="source-class-LengthOfRope.Treehouse.Register.PostType.html#42" title="Go to source code"><var>$args</var></a>
 
 			<div class="description short">
 				

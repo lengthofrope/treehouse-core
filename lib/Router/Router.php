@@ -147,7 +147,7 @@ class Router
         return $archiveTemplate;
     }
 
-/**
+    /**
      * Setup a route for taxonomy pages.
      *
      * It will check if:

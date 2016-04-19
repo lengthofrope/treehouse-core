@@ -140,7 +140,7 @@ WordPress will fall back to the default single/ archive pages.</p>
 
 				<b>Author:</b>
 				LengthOfRope, Bas de Kort <a href="&#109;a&#x69;&#108;&#x74;&#111;&#x3a;&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#98;&#x64;&#101;&#x6b;&#111;r&#x74;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a><br>
-			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.Router.Router.html#5-150" title="Go to source code">Router/Router.php</a>
+			<b>Located at</b> <a href="source-class-LengthOfRope.Treehouse.Router.Router.html#5-182" title="Go to source code">Router/Router.php</a>
 		<br>
 	</div>
 
@@ -273,7 +273,7 @@ WordPress will fall back to the default single/ archive pages.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_routeArchive">#</a>
-		<code><a href="source-class-LengthOfRope.Treehouse.Router.Router.html#69-87" title="Go to source code">routeArchive</a>( )</code>
+		<code><a href="source-class-LengthOfRope.Treehouse.Router.Router.html#101-119" title="Go to source code">routeArchive</a>( )</code>
 
 		<div class="description short">
 			<p>Setup a route for archive pages.</p>
@@ -286,6 +286,45 @@ WordPress will fall back to the default single/ archive pages.</p>
 1. the current active theme has a template file for the given slug;
 2. If not, it will check if the plugin requesting the route has a template file in the 'template' directory for the given slug;
 3. As a last resort falls back to the default theme's archive.php (or index.php)</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-LengthOfRope.Treehouse.Router.Router.html">LengthOfRope\Treehouse\Router\Router</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="routeTaxonomy" id="_routeTaxonomy">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-LengthOfRope.Treehouse.Router.Router.html">LengthOfRope\Treehouse\Router\Router</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_routeTaxonomy">#</a>
+		<code><a href="source-class-LengthOfRope.Treehouse.Router.Router.html#150-168" title="Go to source code">routeTaxonomy</a>( )</code>
+
+		<div class="description short">
+			<p>Setup a route for taxonomy pages.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Setup a route for taxonomy pages.</p>
+
+<p>It will check if:
+1. the current active theme has a template file for the given slug;
+2. If not, it will check if the plugin requesting the route has a template file in the 'template' directory for the given slug;
+3. As a last resort falls back to the default theme's taxonomy.php (or index.php)</p>
 
 
 
