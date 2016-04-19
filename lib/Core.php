@@ -26,6 +26,12 @@ class Core extends PluginComponent
                 ->setPublic(true)
                 ->setHasArchive(true)
                 ->setupRoutes(TH_CORE_FILE);
+
+            Register\Taxonomy::factory('prod_cat', array('th_products'))
+                ->setLabel(__('Product Categories'))
+                ->setLabels(__('Product Categories'), __('Product Category'))
+                ->setPublic(true)
+                ->setupRoutes(TH_CORE_FILE);
         });
     }
 

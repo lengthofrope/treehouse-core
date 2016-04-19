@@ -14,7 +14,7 @@ namespace LengthOfRope\Treehouse\Register;
  *
  * Usage (ordinary mode):
  * <code>
- * new \LengthOfRope\Treehouse\CPT\Create('products', array(
+ * new \LengthOfRope\Treehouse\Register\PostType('products', array(
  *      'labels'      => array(
  *          'name'          => __('Products'),
  *          'singular_name' => __('Product')
@@ -26,7 +26,7 @@ namespace LengthOfRope\Treehouse\Register;
  *
  * Usage (chained mode):
  * <code>
- * \LengthOfRope\Treehouse\CPT\Create::factory('products')
+ * \LengthOfRope\Treehouse\Register\PostType::factory('products')
  *      ->setLabels(__('Products'), __('Product'))
  *      ->setPublic(true)
  *      ->setHasArchive(true);
@@ -37,7 +37,6 @@ namespace LengthOfRope\Treehouse\Register;
 class PostType
 {
 
-    private $created = false;
     private $coreFile;
     protected $slug;
     protected $args;
@@ -78,7 +77,6 @@ class PostType
      */
     private function registerCPT()
     {
-        $this->created = true;
         register_post_type($this->slug, $this->args);
     }
 
@@ -98,7 +96,7 @@ class PostType
      * A plural descriptive name for the post type marked for translation.
      *
      * @param string $label Descriptive name (plural)
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setLabel($label)
     {
@@ -115,7 +113,7 @@ class PostType
      * @see https://codex.wordpress.org/Function_Reference/register_post_type
      * @param string|array $labels If (plural) string, and singularName is also used, auto-generates all labels
      * @param string|false $singularName If string and labels is plural string, auto-generates all labels
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setLabels($labels, $singularName = false)
     {
@@ -164,7 +162,7 @@ class PostType
      * A short descriptive summary of what the post type is.
      *
      * @param string $description Summary of what the post type is.
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setDescription($description)
     {
@@ -193,7 +191,7 @@ class PostType
      * they inherit their values from public.
      *
      * @param boolean $boolean True or false
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setPublic($boolean)
     {
@@ -214,7 +212,7 @@ class PostType
      * will not find your posts and/or pagination will make 404 error...
      *
      * @param boolean $boolean True or false
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setExcludeFromSearch($boolean)
     {
@@ -236,7 +234,7 @@ class PostType
      * and previews/views of your custom post will return 404s.
      *
      * @param boolean $boolean True or false
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setPubliclyQueryable($boolean)
     {
@@ -252,7 +250,7 @@ class PostType
      *     'true'  - display a user-interface (admin panel) for this post type
      *
      * @param boolean $boolean True or false
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setShowUI($boolean)
     {
@@ -266,7 +264,7 @@ class PostType
      * Default: value of public argument
      *
      * @param boolean $boolean True or false
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setShowInNavMenus($boolean)
     {
@@ -288,7 +286,7 @@ class PostType
      * the plugin that creates the menu page needs to set the add_action priority for admin_menu to 9 or lower.
      *
      * @param boolean|string $value True, false or string
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setShowInMenu($value)
     {
@@ -302,7 +300,7 @@ class PostType
      * Default: value of the show_in_menu argument
      *
      * @param boolean $boolean True or false
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setShowInAdminBar($boolean)
     {
@@ -328,7 +326,7 @@ class PostType
      * 100 - below second separator
      *
      * @param integer $integer Sets the position in the menu
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setMenuPosition($integer)
     {
@@ -346,7 +344,7 @@ class PostType
      * 'get_template_directory_uri() . "/images/cutom-posttype-icon.png"' (Use an image located in the current theme)
      *
      * @param string $icon The url of the icon or the name in the iconfont
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setMenuIcon($icon)
     {
@@ -360,7 +358,7 @@ class PostType
      * Default: false
      *
      * @param boolean $boolean True or false
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setHasArchive($boolean)
     {
@@ -388,7 +386,7 @@ class PostType
      * - post-formats
      *
      * @param array|false $supports Array of supported items
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setSupports($supports)
     {
@@ -408,7 +406,7 @@ class PostType
      *
      * @see https://codex.wordpress.org/Function_Reference/register_post_type
      * @param string|array $capabilityType String or array with capability types
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setCapabilityType($capabilityType)
     {
@@ -451,7 +449,7 @@ class PostType
      *
      * @see https://codex.wordpress.org/Function_Reference/register_post_type
      * @param array $capabilities Array with capabilities
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setCapabilities($capabilities)
     {
@@ -468,7 +466,7 @@ class PostType
      * must be added to all roles to add or edit the posts types.
      *
      * @param boolean $boolean True or false
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setMapMetaCap($boolean)
     {
@@ -483,7 +481,7 @@ class PostType
      * Default: false
      *
      * @param boolean $boolean True or false
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setHierarchical($boolean)
     {
@@ -499,7 +497,7 @@ class PostType
      * Default: None
      *
      * @param function $callback
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setRegisterMetaBoxCB($callback)
     {
@@ -515,7 +513,7 @@ class PostType
      * Default: no taxonomies
      *
      * @param array $taxonomies
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setTaxonomies($taxonomies)
     {
@@ -544,7 +542,7 @@ class PostType
      * custom post type will show the correct structure.
      *
      * @param boolean|array $rewrite array with rewrite stuff
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setRewrite($rewrite)
     {
@@ -567,7 +565,7 @@ class PostType
      * If set to a string rather than true (for example ‘publication’), do: example.com/?publication=life-of-pi
      *
      * @param boolean|string $value True or false or string
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setQueryVar($value)
     {
@@ -581,7 +579,7 @@ class PostType
      * Default: true
      *
      * @param boolean $boolean True or false
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setCanExport($boolean)
     {
@@ -595,7 +593,7 @@ class PostType
      * Default: false
      *
      * @param boolean $boolean True or false
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setShowInRest($boolean)
     {
@@ -609,7 +607,7 @@ class PostType
      * Default: $post_type
      *
      * @param string $restBase Base slug for REST API
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setRestBase($restBase)
     {
@@ -624,7 +622,7 @@ class PostType
      * Default: WP_REST_Posts_Controller
      *
      * @param string $restControllerClass Controller class
-     * @return \LengthOfRope\Treehouse\CPT\Create
+     * @return \LengthOfRope\Treehouse\Register\PostType
      */
     public function setRestControllerClass($restControllerClass)
     {

@@ -67,26 +67,6 @@ class Router
     }
 
     /**
-     * Setup a route for archive pages.
-     *
-     * It will check if:
-     * 1. the current active theme has a template file for the given slug;
-     * 2. If not, it will check if the plugin requesting the route has a template file in the 'template'
-     *    directory for the given slug;
-     * 3. As a last resort falls back to the default theme's archive.php (or index.php)
-     *
-     * @return \LengthOfRope\Treehouse\Router\Router
-     */
-    public function routeArchive()
-    {
-        add_filter('archive_template', function($archiveTemplate) {
-            return $this->routeArchiveTemplate($archiveTemplate);
-        });
-
-        return $this;
-    }
-
-    /**
      * Handles the routing of the post type single template.
      *
      * @param string $singleTemplate The current selected single template
@@ -119,6 +99,26 @@ class Router
     }
 
     /**
+     * Setup a route for archive pages.
+     *
+     * It will check if:
+     * 1. the current active theme has a template file for the given slug;
+     * 2. If not, it will check if the plugin requesting the route has a template file in the 'template'
+     *    directory for the given slug;
+     * 3. As a last resort falls back to the default theme's archive.php (or index.php)
+     *
+     * @return \LengthOfRope\Treehouse\Router\Router
+     */
+    public function routeArchive()
+    {
+        add_filter('archive_template', function($archiveTemplate) {
+            return $this->routeArchiveTemplate($archiveTemplate);
+        });
+
+        return $this;
+    }
+
+    /**
      * Handles the routing of the post type archive template.
      *
      * @param string $archiveTemplate The current selected archive template
@@ -145,6 +145,38 @@ class Router
         }
 
         return $archiveTemplate;
+    }
+
+/**
+     * Setup a route for taxonomy pages.
+     *
+     * It will check if:
+     * 1. the current active theme has a template file for the given slug;
+     * 2. If not, it will check if the plugin requesting the route has a template file in the 'template'
+     *    directory for the given slug;
+     * 3. As a last resort falls back to the default theme's taxonomy.php (or index.php)
+     *
+     * @return \LengthOfRope\Treehouse\Router\Router
+     */
+    public function routeTaxonomy()
+    {
+        add_filter('taxonomy_template', function($taxonomyTemplate) {
+            return $this->routeTaxonomyTemplate($taxonomyTemplate);
+        });
+
+        return $this;
+    }
+
+    /**
+     * Handles the routing of the taxonomy template.
+     *
+     * @param string $taxonomyTemplate The current selected taxonomy template
+     * @return string The converted selected taxonomy template, if any
+     */
+    private function routeTaxonomyTemplate($taxonomyTemplate)
+    {
+        // TODO: create taxonomy router
+        return $taxonomyTemplate;
     }
 
 }
