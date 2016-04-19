@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Treehouse Core\n"
-"POT-Creation-Date: 2016-04-17 19:28+0200\n"
-"PO-Revision-Date: 2016-04-17 19:31+0200\n"
+"POT-Creation-Date: 2016-04-19 14:28+0200\n"
+"PO-Revision-Date: 2016-04-19 14:31+0200\n"
 "Last-Translator: Bas de Kort <bdekort@gmail.com>\n"
 "Language-Team: LengthOfRope, Bas de Kort <bdekort@gmail.com>\n"
 "Language: nl_NL\n"
@@ -17,90 +17,115 @@ msgstr ""
 msgid "POT-file for component <strong>'%s'</strong> created."
 msgstr "POT-bestand voor component <strong>'%s'</strong> gemaakt."
 
-#: /lib/Register/PostType.php:132
+#: /lib/Register/PostType.php:134
 msgid "%s Archives"
 msgstr "%s Archieven"
 
-#: /lib/Register/PostType.php:133
+#: /lib/Register/PostType.php:135 /lib/Register/Taxonomy.php:151
 msgid "Parent %s:"
 msgstr "Bovenliggend %s:"
 
-#: /lib/Register/PostType.php:134
+#: /lib/Register/PostType.php:136 /lib/Register/Taxonomy.php:144
 msgid "All %s"
 msgstr "Alle %s"
 
-#: /lib/Register/PostType.php:135
+#: /lib/Register/PostType.php:137 /lib/Register/Taxonomy.php:148
 msgid "Add New %s"
 msgstr "Voeg Nieuw %s Toe"
 
-#: /lib/Register/PostType.php:135 /lib/Register/PostType.php:136
+#: /lib/Register/PostType.php:137 /lib/Register/PostType.php:138
 msgid "Add New"
 msgstr "Voeg Toe"
 
-#: /lib/Register/PostType.php:135 /lib/Register/PostType.php:137
+#: /lib/Register/PostType.php:137 /lib/Register/PostType.php:139
 msgid "New %s"
 msgstr "Nieuw %s"
 
-#: /lib/Register/PostType.php:138
+#: /lib/Register/PostType.php:140 /lib/Register/Taxonomy.php:145
 msgid "Edit %s"
 msgstr "Bewerk %s"
 
-#: /lib/Register/PostType.php:139
+#: /lib/Register/PostType.php:141 /lib/Register/Taxonomy.php:147
 msgid "Update %s"
 msgstr "Update %s"
 
-#: /lib/Register/PostType.php:140
+#: /lib/Register/PostType.php:142 /lib/Register/Taxonomy.php:146
 msgid "View %s"
 msgstr "Bekijk %s"
 
-#: /lib/Register/PostType.php:141
+#: /lib/Register/PostType.php:143 /lib/Register/Taxonomy.php:152
 msgid "Search %s"
 msgstr "Zoek %s"
 
-#: /lib/Register/PostType.php:142 /lib/Register/PostType.php:143
+#: /lib/Register/PostType.php:144 /lib/Register/PostType.php:145
+#: /lib/Register/Taxonomy.php:157
 msgid "No %s found"
 msgstr "Geen %s gevonden"
 
-#: /lib/Register/PostType.php:143
+#: /lib/Register/PostType.php:145
 msgid "No %s found in trash"
 msgstr "Geen %s gevonden in de prullenbak"
 
-#: /lib/Register/PostType.php:144
+#: /lib/Register/PostType.php:146
 msgid "Featured Image"
 msgstr "Uitgelichte Afbeelding"
 
-#: /lib/Register/PostType.php:145
+#: /lib/Register/PostType.php:147
 msgid "Set featured image"
 msgstr "Stel uitgelichte afbeelding in"
 
-#: /lib/Register/PostType.php:146
+#: /lib/Register/PostType.php:148
 msgid "Remove featured image"
 msgstr "Verwijder uitgelichte afbeelding"
 
-#: /lib/Register/PostType.php:147
+#: /lib/Register/PostType.php:149
 msgid "Use as featured image"
 msgstr "Gebruiken als uitgelichte afbeelding"
 
-#: /lib/Register/PostType.php:148
+#: /lib/Register/PostType.php:150
 msgid "Insert into %s"
 msgstr "Toevoegen aan %s"
 
-#: /lib/Register/PostType.php:149
+#: /lib/Register/PostType.php:151
 msgid "Uploaded to this %s"
 msgstr "Geupload naar dit %s"
 
-#: /lib/Register/PostType.php:150 /lib/Register/PostType.php:151
-#: /lib/Register/PostType.php:152
+#: /lib/Register/PostType.php:152 /lib/Register/PostType.php:153
+#: /lib/Register/PostType.php:154
 msgid "%s list"
 msgstr "%s lijst"
 
-#: /lib/Register/PostType.php:151
+#: /lib/Register/PostType.php:153
 msgid "%s list navigation"
 msgstr "%s lijst navigatie"
 
-#: /lib/Register/PostType.php:152
+#: /lib/Register/PostType.php:154
 msgid "Filter %s list"
 msgstr "Filter %s lijst"
+
+#: /lib/Register/Taxonomy.php:149
+msgid "New %s Name"
+msgstr "Nieuwe %s Naam"
+
+#: /lib/Register/Taxonomy.php:150 /lib/Register/Taxonomy.php:151
+msgid "Parent %s"
+msgstr "Bovenliggende %s"
+
+#: /lib/Register/Taxonomy.php:153
+msgid "Popular %s"
+msgstr "Populaire %s"
+
+#: /lib/Register/Taxonomy.php:154
+msgid "Separate %s with commas"
+msgstr "Kommagescheiden %s"
+
+#: /lib/Register/Taxonomy.php:155
+msgid "Add or remove %s"
+msgstr "Voeg %s toe of verwijder"
+
+#: /lib/Register/Taxonomy.php:156
+msgid "Choose from most used %s"
+msgstr "Kies uit de meest gebruikte %s"
 
 #: /lib/Template/Template.php:32
 msgid "File %s does not exist."

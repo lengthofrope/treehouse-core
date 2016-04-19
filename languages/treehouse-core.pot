@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Treehouse Core \n"
-"POT-Creation-Date: 2016-04-17 17:27:49+0000\n"
+"POT-Creation-Date: 2016-04-19 12:28:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,88 +13,112 @@ msgstr ""
 msgid "POT-file for component <strong>'%s'</strong> created."
 msgstr ""
 
-#: /lib/Register/PostType.php:132
+#: /lib/Register/PostType.php:134
 msgid "%s Archives"
 msgstr ""
 
-#: /lib/Register/PostType.php:133
+#: /lib/Register/PostType.php:135 /lib/Register/Taxonomy.php:151
 msgid "Parent %s:"
 msgstr ""
 
-#: /lib/Register/PostType.php:134
+#: /lib/Register/PostType.php:136 /lib/Register/Taxonomy.php:144
 msgid "All %s"
 msgstr ""
 
-#: /lib/Register/PostType.php:135
+#: /lib/Register/PostType.php:137 /lib/Register/Taxonomy.php:148
 msgid "Add New %s"
 msgstr ""
 
-#: /lib/Register/PostType.php:135 /lib/Register/PostType.php:136
+#: /lib/Register/PostType.php:137 /lib/Register/PostType.php:138
 msgid "Add New"
 msgstr ""
 
-#: /lib/Register/PostType.php:135 /lib/Register/PostType.php:137
+#: /lib/Register/PostType.php:137 /lib/Register/PostType.php:139
 msgid "New %s"
 msgstr ""
 
-#: /lib/Register/PostType.php:138
+#: /lib/Register/PostType.php:140 /lib/Register/Taxonomy.php:145
 msgid "Edit %s"
 msgstr ""
 
-#: /lib/Register/PostType.php:139
+#: /lib/Register/PostType.php:141 /lib/Register/Taxonomy.php:147
 msgid "Update %s"
 msgstr ""
 
-#: /lib/Register/PostType.php:140
+#: /lib/Register/PostType.php:142 /lib/Register/Taxonomy.php:146
 msgid "View %s"
 msgstr ""
 
-#: /lib/Register/PostType.php:141
+#: /lib/Register/PostType.php:143 /lib/Register/Taxonomy.php:152
 msgid "Search %s"
 msgstr ""
 
-#: /lib/Register/PostType.php:142 /lib/Register/PostType.php:143
+#: /lib/Register/PostType.php:144 /lib/Register/PostType.php:145 /lib/Register/Taxonomy.php:157
 msgid "No %s found"
 msgstr ""
 
-#: /lib/Register/PostType.php:143
+#: /lib/Register/PostType.php:145
 msgid "No %s found in trash"
 msgstr ""
 
-#: /lib/Register/PostType.php:144
+#: /lib/Register/PostType.php:146
 msgid "Featured Image"
 msgstr ""
 
-#: /lib/Register/PostType.php:145
+#: /lib/Register/PostType.php:147
 msgid "Set featured image"
 msgstr ""
 
-#: /lib/Register/PostType.php:146
+#: /lib/Register/PostType.php:148
 msgid "Remove featured image"
 msgstr ""
 
-#: /lib/Register/PostType.php:147
+#: /lib/Register/PostType.php:149
 msgid "Use as featured image"
 msgstr ""
 
-#: /lib/Register/PostType.php:148
+#: /lib/Register/PostType.php:150
 msgid "Insert into %s"
 msgstr ""
 
-#: /lib/Register/PostType.php:149
+#: /lib/Register/PostType.php:151
 msgid "Uploaded to this %s"
 msgstr ""
 
-#: /lib/Register/PostType.php:150 /lib/Register/PostType.php:151 /lib/Register/PostType.php:152
+#: /lib/Register/PostType.php:152 /lib/Register/PostType.php:153 /lib/Register/PostType.php:154
 msgid "%s list"
 msgstr ""
 
-#: /lib/Register/PostType.php:151
+#: /lib/Register/PostType.php:153
 msgid "%s list navigation"
 msgstr ""
 
-#: /lib/Register/PostType.php:152
+#: /lib/Register/PostType.php:154
 msgid "Filter %s list"
+msgstr ""
+
+#: /lib/Register/Taxonomy.php:149
+msgid "New %s Name"
+msgstr ""
+
+#: /lib/Register/Taxonomy.php:150 /lib/Register/Taxonomy.php:151
+msgid "Parent %s"
+msgstr ""
+
+#: /lib/Register/Taxonomy.php:153
+msgid "Popular %s"
+msgstr ""
+
+#: /lib/Register/Taxonomy.php:154
+msgid "Separate %s with commas"
+msgstr ""
+
+#: /lib/Register/Taxonomy.php:155
+msgid "Add or remove %s"
+msgstr ""
+
+#: /lib/Register/Taxonomy.php:156
+msgid "Choose from most used %s"
 msgstr ""
 
 #: /lib/Template/Template.php:32
