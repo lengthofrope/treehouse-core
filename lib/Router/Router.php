@@ -21,6 +21,7 @@ namespace LengthOfRope\Treehouse\Router;
 class Router
 {
 
+    private $slug;
     private $coreFile;
 
     /**
@@ -175,7 +176,24 @@ class Router
      */
     private function routeTaxonomyTemplate($taxonomyTemplate)
     {
-        // TODO: create taxonomy router
+        if (!is_tax($this->slug)) {
+            // Bail early
+            return $taxonomyTemplate;
+        }
+
+        // Check if this template is found in the theme or child theme
+        $found = locate_template('taxonomy-' . $this->slug . '.php', false);
+
+        if (empty($found)) {
+            // The theme does not provide a template for the single, so provide our own.
+            $ourTemplate = dirname($this->coreFile) . '/templates/taxonomy-' . $this->slug . '.php';
+
+            // If our plugin/ theme provides the file return it
+            if (is_file($ourTemplate)) {
+                $taxonomyTemplate = $ourTemplate;
+            }
+        }
+
         return $taxonomyTemplate;
     }
 
