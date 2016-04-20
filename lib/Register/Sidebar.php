@@ -33,19 +33,19 @@ namespace LengthOfRope\Treehouse\Register;
 class Sidebar
 {
 
-    protected $id;
+    protected $identifier;
     protected $args;
 
     /**
      * Setup a new sidebar
      *
-     * @param string $id The unique slug for this sidebar.
+     * @param string $identifier The unique slug for this sidebar.
      * @param array $args
      */
-    public function __construct($id, $args = array())
+    public function __construct($identifier, $args = array())
     {
         // Add the slugPrefix to make sure it is a unique posttype.
-        $this->id = $id;
+        $this->identifier = $identifier;
 
         $this->args = $args;
 
@@ -61,7 +61,7 @@ class Sidebar
     private function registerSidebar()
     {
         // Override id with given id
-        $this->args['id'] = $this->id;
+        $this->args['id'] = $this->identifier;
 
         register_sidebar($this->args);
     }
