@@ -69,13 +69,13 @@ class Sidebar
     /**
      * Factory to allow chaining
      *
-     * @param string $id The unique id for this sidebar.
+     * @param string $identifier The unique id for this sidebar.
      * @param array $args
      * @param string $slugPrefix
      */
-    public static function factory($id, $args = array())
+    public static function factory($identifier, $args = array())
     {
-        return new Sidebar($id, $args);
+        return new Sidebar($identifier, $args);
     }
 
     /**
