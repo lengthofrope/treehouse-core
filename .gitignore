@@ -1,3 +1,5 @@
 apigen.cmd
 apigen.phar
 tpl/test.xml
+/nbproject/private/
+nbproject/
